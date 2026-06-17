@@ -1,49 +1,123 @@
-# Sunanda Vasanthi Tata - Portfolio
+<div align="center">
 
-Premium portfolio site for a software engineer focused on distributed systems, cloud platforms, AI-assisted workflows, and product-quality frontend execution.
+# Sunanda Vasanthi Tata
 
-The goal of this site is simple: make the first impression feel deliberate, polished, and technically credible. It is built to help recruiters understand the kind of engineer I am in under a minute.
+### Software Engineer | Distributed Systems | AI/LLM Engineer | Full-Stack Developer
 
-## What It Shows
+California, USA
 
-- Large-scale distributed systems experience
-- Production backend and full-stack product work
-- Cloud and Kubernetes-based delivery
-- AI/ML-adjacent engineering with practical execution
-- A strong focus on UX detail, motion, and visual clarity
+Building scalable systems, cloud-native applications, and AI-powered products.
 
-## Portfolio Highlights
+[![Email](https://img.shields.io/badge/Email-sunandavasanthitata%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sunandavasanthitata@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-tata--sunanda-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tata-sunanda/)
+[![GitHub](https://img.shields.io/badge/GitHub-sunandatata-181717?style=flat&logo=github&logoColor=white)](https://github.com/sunandatata)
 
-- Hero section with clear positioning and high-signal metrics
-- Timeline-style experience cards with quantified impact
-- Skill sections organized by category for fast scanning
-- Featured project cards with preview imagery and GitHub links
-- Premium dark visual system with responsive behavior
-- Motion design that respects reduced-motion preferences
+</div>
+
+---
+
+## About Me
+
+Software Engineer with **3+ years of experience** designing distributed systems, cloud-native platforms, and AI-driven applications. I earned my **M.S. in Computer Science from California State University, Fullerton (May 2026)** and have worked at **Pacific Life, Hitachi Vantara, and Accenture**.
+
+My background spans backend engineering, microservices, Kubernetes, Kafka event streaming, cloud infrastructure, and modern AI/LLM systems. I build reliable software that scales to millions of users while keeping performance, availability, and developer experience in focus.
+
+### Highlights
+
+* Built systems processing **1.8M+ API requests/day**
+* Engineered Kafka pipelines handling **12K+ events/minute**
+* Maintained **99.9% production uptime**
+* Developed **LLM-powered applications** using LangChain and OpenAI
+* Experience across **AWS, Azure, Docker, Kubernetes, and Terraform**
+* Passionate about **System Design and Distributed Systems**
+
+---
+
+## Technical Expertise
+
+### Languages
+
+`Java` `Python` `TypeScript` `JavaScript` `Go` `C#` `SQL`
+
+### Backend & APIs
+
+`Spring Boot` `FastAPI` `Node.js` `REST APIs` `gRPC` `Microservices`
+
+### Cloud & DevOps
+
+`AWS` `Azure` `Docker` `Kubernetes` `Terraform` `CI/CD`
+
+### Distributed Systems
+
+`Kafka` `Redis` `Event-Driven Architecture` `System Design`
+
+### Databases
+
+`PostgreSQL` `MySQL` `DynamoDB` `Cassandra`
+
+### AI/ML
+
+`LLMs` `LangChain` `RAG` `PyTorch` `Transformers` `MLflow` `OpenAI API`
+
+---
+
+## Experience
+
+### Pacific Life — Software Engineer Intern
+
+* Built APIs and React applications processing **200K+ records/month**
+* Reduced p99 latency by **24%** on Kafka pipelines
+* Developed LLM-powered anomaly detection systems
+
+### Hitachi Vantara — Software Engineer
+
+* Architected Java microservices serving **1.8M+ API requests/day**
+* Improved API latency by **23%**
+* Delivered production systems with **99.9% uptime**
+
+### Accenture — Software Developer
+
+* Built backend APIs on Kubernetes
+* Resolved **95% of L3 incidents** within SLA
+* Improved reliability and testing coverage
+
+---
 
 ## Featured Projects
 
-- [Ride-Matching Platform](https://github.com/sunandatata/Ride-Matching-Platform)
-- [AI-SED](https://github.com/sunandatata/AI--SED)
+### [Ride-Matching & ETA Engine](https://github.com/sunandatata/Ride-Matching-Platform)
 
-## Tech Stack
+Uber-inspired distributed platform using Kafka, Redis Geo, Kubernetes, and PostgreSQL supporting **10K+ concurrent requests**.
 
-- HTML
-- CSS
-- JavaScript
-- GSAP
-- Lucide Icons
+### [AI²-SED: Adversarial Phishing Defense](https://github.com/sunandatata/AI--SED)
 
-## Why This Repo Exists
+Fine-tuned RoBERTa and T5 models on **50K+ samples**, achieving **14% F1 improvement**.
 
-This portfolio is designed to communicate more than experience. It is meant to show product taste, frontend discipline, and the ability to ship systems that feel considered end to end.
+### Portfolio Website
 
-## Contact
+This repository contains my personal portfolio site, built to present my experience, projects, and engineering story with a premium product feel.
 
-- Email: sunandavasanthitata@gmail.com
-- LinkedIn: https://linkedin.com/in/sunanda-tata
-- GitHub: https://github.com/sunanda-tata
+---
 
-## Keywords
+## Education
 
-Software Engineer, Full-Stack Engineer, Distributed Systems, Backend Engineering, Cloud Infrastructure, Kubernetes, Java, Spring Boot, React, Kafka, AWS, Azure, AI Engineering, Portfolio
+**M.S. Computer Science**  
+California State University, Fullerton — **May 2026**
+
+---
+
+## Engineering Philosophy
+
+> Build for scale. Design for reliability. Automate intelligently.
+
+I enjoy solving complex engineering problems involving distributed systems, cloud infrastructure, and AI-powered applications.
+
+---
+
+<div align="center">
+
+### Open to Software Engineering Opportunities
+
+Feel free to explore my repositories and connect with me.
+
+</div>
