@@ -2,11 +2,11 @@
 
 # Sunanda Tata
 
-### Software Engineer | Distributed Systems | AI Retrieval | Full-Stack Development
+### Software Engineer | AI/ML Engineering | Distributed Systems | Full-Stack Development
 
 San Jose, California
 
-Building scalable Java and Spring platforms, cloud-native services, AI retrieval systems, and full-stack product experiences.
+Building AI-powered workflows, enterprise data platforms, retrieval systems, and real-time full-stack products.
 
 [![Email](https://img.shields.io/badge/Email-sunandatata.careers%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sunandatata.careers@gmail.com)
 [![Phone](https://img.shields.io/badge/Phone-%2B1%20650--764--9023-2563EB?style=flat&logo=phone&logoColor=white)](tel:+16507649023)
@@ -19,18 +19,16 @@ Building scalable Java and Spring platforms, cloud-native services, AI retrieval
 
 ## About Me
 
-Software engineer with experience building Java and Spring services, reactive data platforms, MERN applications, and AI retrieval systems. I earned my **M.S. in Computer Science from California State University, Fullerton (May 2026)** and have worked across **Pacific Life, California State University Fullerton, and Hitachi Vantara**.
-
-My work spans loan portfolio validation, research portals, high-volume metadata platforms, asynchronous data migration, hybrid retrieval, and cloud-native deployments. I focus on systems that are scalable, observable, reliable, and practical for the teams operating them.
+Software engineer with experience building AI-powered underwriting systems, enterprise metadata platforms, retrieval pipelines, and real-time full-stack applications. I earned my **M.S. in Computer Science from California State University, Fullerton (May 2026)** and have worked across **Pacific Life and Hitachi Vantara**, alongside open-source contributions to **RAGFlow**.
 
 ### Highlights
 
-* Reduced API p95 latency by **40%** with Redis caching and Kafka consumer tuning.
-* Built loan validation services and React reporting workflows for **200+ internal users**.
-* Supported **99.9% service availability** through resilient ingestion and persistence patterns.
-* Reduced reporting retrieval latency by **40%** with Spring WebFlux and React.
-* Cut cloud regression-testing cycles by **60%** through deployment automation.
-* Reduced research-document lookup time by **30%** with a RAG assistant prototype.
+* Reduced manual geospatial review effort by **75%** with a Python, ESRI, LangChain, and LLM underwriting platform.
+* Reduced underwriting policy lookup from **15 minutes to 30 seconds** with grounded RAG.
+* Lowered LLM inference costs by **28%** through model-routing optimization.
+* Scaled Lumada Data Catalog to **1M+ enterprise metadata records**.
+* Maintained **99.9% availability** across AI workflows and enterprise metadata services.
+* Improved retrieval correctness and multilingual behavior through RAGFlow contributions.
 
 ---
 
@@ -38,79 +36,78 @@ My work spans loan portfolio validation, research portals, high-volume metadata 
 
 ### Programming Languages
 
-`Java` `Python` `C` `C++` `JavaScript` `TypeScript` `Go` `SQL` `HTML/CSS`
+`Python` `Java` `JavaScript` `TypeScript` `Go` `SQL` `HTML/CSS`
 
-### Frameworks & Development
+### AI & Machine Learning
 
-`Spring Boot` `Spring WebFlux` `Spring Integration` `Spring Batch` `JPA/Hibernate` `React.js` `Node.js` `FastAPI` `Django` `REST APIs` `Microservices`
+`Generative AI` `LLMs` `Machine Learning` `NLP` `LangChain` `RAG` `AI Agents` `Prompt Engineering` `Embeddings` `Semantic Search` `Vector Databases` `Knowledge Graphs` `RoBERTa` `T5`
 
-### AI & Retrieval
+### Full-Stack & Backend
 
-`LangChain` `LLMs` `RAG` `Prompt Engineering` `Vector Search` `Information Retrieval` `Neo4j` `Qdrant` `BM25`
-
-### Data & Messaging
-
-`PostgreSQL` `MySQL` `MongoDB` `Redis` `Apache Kafka`
+`React.js` `Node.js` `FastAPI` `Spring Boot` `Spring WebFlux` `REST APIs` `Microservices` `JSON` `PostgreSQL` `MySQL` `MongoDB` `Redis`
 
 ### Cloud & DevOps
 
-`AWS` `Azure` `Docker` `Kubernetes` `Jenkins` `GitHub Actions` `Terraform` `Git` `Maven` `Gradle` `CI/CD`
+`AWS` `Azure` `GCP` `Docker` `Kubernetes` `Apache Kafka` `Git` `GitHub Actions` `Jenkins` `Terraform` `CI/CD` `Grafana` `Prometheus`
 
-### Observability, Security & Quality
+### Software Engineering
 
-`Prometheus` `Grafana` `IAM` `SSO` `OAuth 2.0` `RBAC` `TDD` `Testing` `Debugging` `Agile` `Scrum` `SDLC`
+`Data Structures` `Algorithms` `OOP` `Distributed Systems` `Database Systems` `Enterprise Applications` `ERP` `Debugging` `Code Review` `Unit Testing` `Integration Testing` `TDD` `SDLC` `Agile` `Scrum`
 
 ---
 
 ## Experience
 
-### Pacific Life - Software Developer (Contract)
+### Pacific Life - Software Developer Intern
 
 **June 2025 - March 2026**
 
-* Integrated LangChain validation workflows into loan ingestion pipelines to identify anomalies and rule violations before downstream processing.
-* Reduced API p95 latency by **40%** on Kubernetes-hosted services through Redis caching and Kafka consumer tuning.
-* Engineered Java and Spring Boot loan validation services with REST APIs and React dashboards for **200+ internal users**.
-* Delivered TypeScript approval and exception-handling workflows through bi-weekly GitHub Actions releases with WCAG 2.1 AA standards.
-
-### California State University, Fullerton - Graduate Research Assistant
-
-**September 2024 - May 2025**
-
-* Enhanced MERN researcher and faculty portals, contributing to a **15% increase in user engagement**.
-* Integrated centralized IAM and SSO, contributing to a **15% increase in faculty adoption**.
-* Prototyped a RAG research assistant that reduced information retrieval time by **30%** during evaluation.
-* Implemented Prometheus and Grafana monitoring across infrastructure supporting **80+ connected research devices**.
+* Reduced manual geospatial review effort by **75%** with a Python underwriting intelligence platform integrating ESRI REST APIs, LangChain, and LLM services.
+* Reduced external geocoding API usage by **35%** through a Redis cache-first architecture.
+* Reduced underwriting policy lookup from **15 minutes to 30 seconds per case** with a grounded RAG pipeline.
+* Reduced LLM inference costs by **28%** by routing 70% of routine requests to Phi-3 Mini.
+* Reduced exception resolution from **8 minutes to 3 minutes per case** with REST APIs and React/TypeScript workflows.
+* Maintained **99.9% workflow availability** on Kubernetes with fallbacks, testing, CI/CD, and human-in-the-loop safeguards.
 
 ### Hitachi Vantara - Software Engineer
 
 **August 2022 - August 2024**
 
-* Developed scalable Java and Spring Boot microservices for the Lumada Data Catalog across distributed data sources.
-* Built resilient Spring Integration and JPA/Hibernate workflows with TDD and fault-tolerant patterns supporting **99.9% service availability**.
-* Engineered asynchronous data migration and replication with Spring Batch and Apache Kafka.
-* Built Spring WebFlux and React workflows that reduced reporting retrieval latency by **40%**.
-* Automated Docker, Kubernetes, Jenkins, AWS, and Azure validation workflows, reducing regression cycles by **60%**.
+* Scaled Lumada Data Catalog to expose **1M+ enterprise metadata records** through Java and Spring Boot APIs.
+* Achieved **99.9% service availability** with fault-tolerant Spring Integration and JPA/Hibernate workflows.
+* Reduced metadata synchronization time by **45%** with Spring Batch and Apache Kafka.
+* Reduced metadata retrieval latency by **40%** with Spring WebFlux and React.js.
+* Reduced regression-testing cycles by **60%** through AWS, Docker, Kubernetes, Jenkins, and CI/CD automation.
 
-### Hitachi Vantara - Software Engineer (Co-Op)
+### Hitachi Vantara - Software Engineer Co-Op
 
 **January 2022 - August 2022**
 
-* Developed Java data transformation plugins for Pentaho and optimized SQL queries, improving reporting efficiency by **15%**.
-* Prepared technical documentation and delivered **6+ demos** during Agile sprints.
-* Built Python integration tests and supported Docker and Kubernetes staging deployments.
+* Improved Pentaho query-processing efficiency by **15%** through Java and SQL backend development.
+* Delivered **8+ technical demonstrations** to stakeholders during Agile sprints.
+* Reduced environment setup and regression-testing cycles by **50%** with Docker and Python integration tests.
+
+---
+
+## Open Source Contributions
+
+### [RAGFlow](https://github.com/infiniflow/ragflow) - Open Source Contributor
+
+* Improved retrieval API correctness across **20+ regression scenarios** by fixing parameter-precedence behavior.
+* Restored correct top-k ordering across **25+ reranking test cases** by sorting reranked chunks before pagination.
+* Extended Agent memory retrieval across **3 languages** and validated behavior through **15+ regression tests**.
 
 ---
 
 ## Featured Projects
 
-### ChronoMind Retrieval Engine
+### [Ride Matching Platform](https://github.com/sunandatata/Ride-Matching-Platform)
 
-Temporal memory reasoning engine combining **Neo4j** causal graph traversal, **Qdrant** vector search, **BM25** lexical retrieval, and a custom ranking pipeline to reconstruct grounded chronological context.
+End-to-end ride-dispatch platform with **three role-specific React/TypeScript applications**, Node.js/Express APIs, WebSocket synchronization, a seven-stage ride lifecycle, and **11+ automated test scripts**.
 
-### Ride Matching Platform
+### AI2-SED Defense Framework
 
-Enterprise-grade mobility ecosystem for real-time ride dispatching with a modular full-stack architecture, live route visualization, driver-matching workflows, and an admin dashboard for fleet, network, and revenue analytics.
+Adversarial machine learning framework for phishing detection using **RoBERTa**, URL-based features, a **T5** adaptive attack pipeline, FastAPI inference, and a Streamlit evaluation interface.
 
 ---
 
@@ -122,15 +119,9 @@ GPA: **3.7/4.0**
 
 ---
 
-## Certification
-
-**Claude Agentic AI Architect** - ongoing
-
----
-
 <div align="center">
 
-### Open to Software Engineering Opportunities
+### Open to Software Engineering and AI/ML Opportunities
 
 Explore my work or connect with me through the links above.
 
