@@ -1,0 +1,12 @@
+# Local IDE & tooling configurations
+.claude/
+.agents/
+skills-lock.json
+
+# Draft & local files
+FINAL_BASE.pdf
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
