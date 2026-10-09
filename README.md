@@ -2,7 +2,7 @@
 
 # Sunanda Tata
 
-### Software Engineer | AI/ML Engineering | Distributed Systems | Full-Stack Development
+### Software Engineer | AI/ML Engineering | Distributed Systems | Full-Stack Development|
 
 San Jose, California
 
