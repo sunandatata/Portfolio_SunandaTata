@@ -5,22 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Sunanda Tata — Software Engineer specializing in scalable backend microservices, grounded AI retrieval pipelines (RAG), high-throughput enterprise data platforms, and cloud-native systems. M.S. in CS from CSU Fullerton.">
+  <meta name="description" content="Sunanda Tata — Full-stack AI and software engineer with 3+ years of experience building enterprise applications, RAG systems, and scalable REST APIs using Java, Python, React, and cloud-native technologies.">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunanda Tata — Software Engineer">
+  <meta property="og:description" content="Distributed systems, AI infrastructure, retrieval pipelines, and cloud-native engineering.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sunanda Tata — Software Engineer">
+  <meta name="twitter:description" content="Distributed systems, AI infrastructure, retrieval pipelines, and cloud-native engineering.">
   <title>Sunanda Tata — Software Engineer | Distributed Systems &amp; AI Infrastructure</title>
 
   <!-- Favicon: Clean Apple-style Monogram SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='none' stroke='rgba(255,255,255,0.2)' stroke-width='1'/%3E%3Ctext x='16' y='21' font-family='-apple-system,system-ui,sans-serif' font-size='14' font-weight='700' fill='%23fff' text-anchor='middle'%3EST%3C/text%3E%3C/svg%3E">
-
-  <!-- Resource Hints for High-Speed Load Acceleration -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="dns-prefetch" href="https://d8j0ntlcm91z4.cloudfront.net">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" as="script">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     /* -------------------------------------------------------------
@@ -49,32 +46,14 @@
     }
     html {
       scroll-padding-top: 5.5rem;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
-    html.lenis, html.lenis body {
-      height: auto;
-    }
-    .lenis.lenis-smooth {
-      scroll-behavior: auto !important;
-    }
-    .lenis.lenis-smooth [data-lenis-prevent] {
-      overscroll-behavior: contain;
-    }
-    .lenis.lenis-stopped {
-      overflow: hidden;
-    }
-
-    /* Apple Pure Fluid Scrolling: Solid Continuity, Zero Pop-in, Zero Content Lag */
-    .apple-card, .project-card, .section-header, .cta-canvas {
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-
     :root {
       /* Typography Stacks */
-      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
-      --font-serif: "Instrument Serif", "Times New Roman", Times, serif;
-      --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+      --font-serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+      --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
       /* Apple Dark Palette (Pure Onyx & Frosted Glass) */
       --bg: #000000;
@@ -136,11 +115,15 @@
       color: inherit;
       text-decoration: none;
     }
+    a, button {
+      touch-action: manipulation;
+    }
     button {
       font-family: inherit;
       color: inherit;
       border: none;
       background: none;
+      cursor: pointer;
     }
 
     /* Clean & High-Visibility Spatial Animation Backdrop */
@@ -153,18 +136,11 @@
       pointer-events: none;
       z-index: 0;
       overflow: hidden;
-      background: #03050a;
-    }
-    .spatial-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.92;
-      transform: translateZ(0);
-      will-change: opacity;
+      background:
+        radial-gradient(ellipse at 50% 18%, rgba(41, 151, 255, 0.13) 0%, rgba(8, 20, 38, 0.08) 32%, transparent 66%),
+        radial-gradient(circle at 12% 56%, rgba(100, 210, 255, 0.055), transparent 34%),
+        radial-gradient(circle at 88% 42%, rgba(41, 151, 255, 0.05), transparent 32%),
+        linear-gradient(180deg, #020408 0%, #000000 72%);
     }
     .spatial-scrim {
       position: absolute;
@@ -197,6 +173,10 @@
       border-radius: var(--radius-sm);
     }
     :focus:not(:focus-visible) {
+      outline: none;
+      box-shadow: none;
+    }
+    main:focus {
       outline: none;
       box-shadow: none;
     }
@@ -266,7 +246,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      min-height: 40px;
+      min-height: 44px;
       transition: transform 0.25s var(--spring), background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
     .btn svg {
@@ -277,16 +257,6 @@
     }
     .btn-solid:hover svg {
       transform: translateY(1.5px);
-    }
-    /* Touch Target Extension for Accessible Tap Dimensions */
-    .btn::after, .dock-link::after, .filter-btn::after {
-      content: "";
-      position: absolute;
-      top: -4px;
-      bottom: -4px;
-      left: -4px;
-      right: -4px;
-      pointer-events: auto;
     }
     .btn-solid {
       background: linear-gradient(180deg, #ffffff 0%, #ececed 100%);
@@ -417,6 +387,9 @@
       position: relative;
       z-index: 2;
       padding: 0.35rem 0.72rem;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
       font-size: 0.81rem;
       font-weight: 450;
       letter-spacing: -0.01em;
@@ -436,6 +409,10 @@
       align-items: center;
       gap: 0.35rem;
       margin-left: 0.2rem;
+    }
+    .mobile-menu-toggle,
+    .mobile-menu {
+      display: none;
     }
 
     /* -------------------------------------------------------------
@@ -695,8 +672,6 @@
       padding: 2.25rem;
       box-shadow: var(--border-top-specular), 0 8px 30px rgba(0, 0, 0, 0.35);
       transition: transform 380ms var(--spring), background-color 280ms ease, border-color 280ms ease, box-shadow 380ms var(--spring);
-      will-change: transform;
-      transform: translateZ(0);
       position: relative;
       overflow: hidden;
     }
@@ -914,6 +889,7 @@
       white-space: nowrap;
       transition: color 200ms ease;
       position: relative;
+      min-height: 44px;
       z-index: 2;
       background: transparent;
       border: none;
@@ -940,8 +916,6 @@
       position: relative;
       overflow: hidden;
       transition: transform 380ms var(--spring), background-color 280ms ease, border-color 280ms ease, box-shadow 380ms var(--spring);
-      will-change: transform;
-      transform: translateZ(0);
     }
     .bento-card:hover {
       background: rgba(18, 22, 32, 0.75) !important;
@@ -1099,8 +1073,6 @@
       border-top: 1px solid var(--border-bright);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
       transition: transform 380ms var(--spring), background-color 280ms ease, border-color 280ms ease, box-shadow 380ms var(--spring);
-      will-change: transform;
-      transform: translateZ(0);
     }
     .project-card:hover {
       background: rgba(18, 22, 32, 0.75) !important;
@@ -1136,7 +1108,7 @@
       right: 10%;
       top: 50%;
       height: 1px;
-      background: dashed 1px rgba(255, 255, 255, 0.18);
+      background: transparent;
       border-top: 1px dashed rgba(255, 255, 255, 0.2);
       z-index: 1;
     }
@@ -1254,17 +1226,94 @@
     @media (max-width: 960px) {
       .projects-grid { grid-template-columns: 1fr; }
       .dock-links { display: none; }
+      .mobile-menu-toggle {
+        display: inline-flex;
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
+        padding: 0;
+        border-radius: var(--radius-full);
+      }
+      .mobile-menu-toggle svg {
+        transition: transform 280ms var(--spring);
+      }
+      .mobile-menu-toggle[aria-expanded="true"] svg {
+        transform: rotate(90deg);
+      }
+      .mobile-menu {
+        position: absolute;
+        top: calc(100% + 0.65rem);
+        left: 50%;
+        display: grid;
+        width: min(22rem, calc(100vw - 2rem));
+        padding: 0.45rem;
+        background: rgba(12, 13, 16, 0.92);
+        backdrop-filter: blur(28px) saturate(180%);
+        -webkit-backdrop-filter: blur(28px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-top-color: rgba(255, 255, 255, 0.24);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translate(-50%, -0.5rem) scale(0.98);
+        transform-origin: top center;
+        transition: opacity 180ms ease, visibility 180ms ease, transform 280ms var(--spring);
+      }
+      .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(-50%, 0) scale(1);
+      }
+      .mobile-menu-link {
+        display: flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 0.65rem 0.9rem;
+        border-radius: 12px;
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+        font-weight: 500;
+        transition: color 160ms ease, background-color 160ms ease;
+      }
+      .mobile-menu-link:hover,
+      .mobile-menu-link:focus-visible,
+      .mobile-menu-link.active {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.08);
+      }
     }
     @media (max-width: 640px) {
+      .dock-logo-text { display: none !important; }
       .hero-metrics-strip { grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%; }
       .metric-caption { max-width: 140px; font-size: 0.72rem; }
       .metric-item:not(:last-child)::after { display: none; }
       .apple-card { padding: 1.5rem; }
+      .project-info { padding: 1.5rem; }
+      .project-schematic { height: auto; min-height: 190px; padding: 1.15rem; }
+      .schematic-nodes { gap: 0.35rem; }
+      .schematic-node {
+        flex: 1;
+        min-width: 0;
+        min-height: 44px;
+        justify-content: center;
+        padding: 0.42rem 0.35rem;
+        text-align: center;
+        font-size: 0.66rem;
+        line-height: 1.2;
+      }
+      .schematic-node svg { flex: 0 0 auto; }
     }
     @media (max-width: 480px) {
-      .dock-logo-text { display: none !important; }
       .hero-actions-row { width: 100%; flex-direction: column; align-items: stretch; }
       .hero-actions-row .btn { width: 100%; justify-content: center; }
+      .nav-dock-wrapper { top: 0.75rem; padding: 0 0.75rem; }
+      .nav-dock { max-width: calc(100vw - 1.5rem); }
+      .nav-resume span { display: none; }
+      .nav-resume { width: 44px; padding: 0 !important; }
+      .nav-contact { padding-inline: 0.75rem !important; }
     }
 
     /* Reduced Motion */
@@ -1274,34 +1323,150 @@
         transition: none !important;
         scroll-behavior: auto !important;
       }
-      .spatial-video, .particles-canvas {
+      .particles-canvas {
         display: none !important;
       }
       .tactile-press:active { transform: none !important; }
       .apple-card:hover, .project-card:hover { transform: none !important; }
     }
     @media (prefers-reduced-transparency: reduce) {
-      .nav-dock, .apple-card, .btn-glass, .cta-canvas {
+      .nav-dock, .mobile-menu, .apple-card, .btn-glass, .cta-canvas {
         background-color: #0c0d12 !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
       }
+    }
+    @media (prefers-contrast: more) {
+      .nav-dock, .mobile-menu, .apple-card, .project-card, .cta-canvas {
+        background: #050608 !important;
+        border-color: rgba(255, 255, 255, 0.55) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      .dock-link, .mobile-menu-link, .metric-caption, .section-subtitle {
+        color: #ffffff;
+      }
+    }
+    @media (hover: none) {
+      .btn:hover,
+      .apple-card:hover,
+      .bento-card:hover,
+      .project-card:hover {
+        transform: none !important;
+      }
+      .apple-card:hover::before,
+      .bento-card:hover::before,
+      .project-card:hover::before {
+        opacity: 0;
+      }
+    }
+
+    /* Reference inspired layout: persistent sidebar, quiet canvas, clear proof. */
+    .nav-dock-wrapper {
+      inset: 0 auto 0 0;
+      width: 300px;
+      padding: 1.8rem 1.55rem;
+      justify-content: stretch;
+      align-items: stretch;
+      background: rgba(10, 11, 13, 0.98);
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+      pointer-events: auto;
+    }
+    .nav-dock {
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1.45rem;
+    }
+    .dock-logo { padding: 0.25rem 0; font-size: 1.2rem; font-weight: 700; }
+    .dock-logo-badge { width: 40px; height: 40px; border-radius: 50%; font-size: 0.85rem; }
+    .sidebar-handle { min-height: 42px; padding-left: 3.4rem; margin-top: -1.15rem; color: var(--text-secondary); position: relative; display: flex; align-items: center; }
+    .sidebar-status-dot { width: 9px; height: 9px; border-radius: 50%; background: #70d68b; position: absolute; left: 3rem; bottom: 1px; border: 2px solid #0a0b0d; }
+    .sidebar-role { min-height: 56px; padding: 0 1rem; border-radius: 16px; border: 1px solid var(--border-subtle); background: rgba(255,255,255,0.045); color: var(--text-secondary); display: flex; align-items: center; gap: 0.7rem; margin: 0 0 0.45rem; }
+    .sidebar-role .pulse-dot { position: static; width: 9px; height: 9px; }
+    .dock-links { display: flex; flex-direction: column; align-items: stretch; gap: 0.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; }
+    .dock-indicator { display: none; }
+    .dock-link { min-height: 50px; padding: 0.65rem 0.85rem; border-radius: 12px; color: var(--text-secondary); font-size: 0.96rem; font-weight: 500; gap: 0.8rem; }
+    .dock-link:hover, .dock-link.active { color: #fff; background: rgba(255,255,255,0.075); }
+    .sidebar-link-icon { width: 22px; color: var(--text-tertiary); font-size: 1.12rem; text-align: center; }
+    .dock-link.active .sidebar-link-icon { color: #fff; }
+    .dock-actions { margin: auto 0 0; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
+    .dock-actions .btn { min-height: 44px; padding: 0.55rem 0.65rem !important; font-size: 0.84rem !important; }
+    .mobile-menu-toggle, .mobile-menu { display: none; }
+    main { margin-left: 300px; }
+    .hero-section { min-height: 88vh; justify-content: flex-start; text-align: left; padding: 3.5rem clamp(2rem, 6vw, 6.5rem); }
+    .hero-shell { align-items: flex-start; text-align: left; max-width: 1040px; margin: 0; gap: 1.45rem; }
+    .display-h1 { align-items: flex-start; max-width: 100%; margin: 0; font-size: clamp(3.5rem, 6vw, 5.8rem); line-height: 0.99; letter-spacing: -0.055em; }
+    .hero-name { display: block; }
+    .hero-name { font-size: clamp(3.5rem, 6vw, 5.8rem); }
+    .hero-subhead { display: block; font-size: inherit; margin-top: 0.08em; }
+    .hero-subhead-accent { display: inline; background: #e7df66; color: #171713; -webkit-text-fill-color: #171713; padding: 0 0.12em 0.04em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-lede { max-width: 780px; margin: 0; font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.7; color: var(--text-secondary); }
+    .hero-actions-row { justify-content: flex-start; }
+    .hero-metrics-strip { width: 100%; max-width: 980px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; margin-top: 0.7rem; }
+    .metric-item { min-height: 145px; padding: 1.2rem 1.35rem; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--surface-card); text-align: left; }
+    .metric-item:not(:last-child)::after { display: none; }
+    .metric-num { font-size: clamp(2.7rem, 4vw, 3.7rem); line-height: 1; }
+    .metric-caption { max-width: 100%; margin-top: 0.55rem; }
+    .container { max-width: 1180px; }
+    .footer-shell { margin-left: 300px; }
+    section:not(.hero-section) { scroll-margin-top: 2rem; }
+
+    @media (max-width: 960px) {
+      .nav-dock-wrapper { inset: 0 0 auto; width: 100%; height: 72px; padding: 0 1.25rem; border-right: 0; border-bottom: 1px solid var(--border-subtle); }
+      .nav-dock { height: 100%; flex-direction: row; align-items: center; gap: 0.5rem; }
+      .dock-logo { font-size: 1rem; }
+      .dock-logo-badge { width: 34px; height: 34px; }
+      .sidebar-handle, .sidebar-role, .dock-links { display: none; }
+      .dock-actions { display: flex; margin: 0 0 0 auto; padding: 0; border: 0; gap: 0.45rem; }
+      .dock-actions .btn { min-height: 42px; }
+      .mobile-menu-toggle { display: inline-flex !important; width: 44px; padding: 0 !important; }
+      .mobile-menu { display: grid; position: absolute; top: calc(100% + 0.45rem); right: 1rem; left: auto; width: min(22rem, calc(100vw - 2rem)); padding: 0.45rem; background: #121316; border: 1px solid var(--border-bright); border-radius: 14px; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-0.4rem); transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease; }
+      .mobile-menu.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+      .mobile-menu-link { min-height: 46px; display: flex; align-items: center; padding: 0.65rem 0.9rem; border-radius: 10px; color: var(--text-secondary); }
+      .mobile-menu-link:hover, .mobile-menu-link.active { color: #fff; background: rgba(255,255,255,0.08); }
+      main { margin-left: 0; padding-top: 72px; }
+      .footer-shell { margin-left: 0; }
+      .hero-section { min-height: 0; padding-top: 4rem; padding-bottom: 4rem; }
+    }
+    @media (max-width: 560px) {
+      .nav-dock-wrapper { height: 66px; padding: 0 0.9rem; }
+      .dock-logo { font-size: 0.92rem; }
+      .nav-resume, .nav-contact { display: none !important; }
+      main { padding-top: 66px; }
+      .hero-section { padding: 3.5rem 1.25rem 3rem; }
+      .display-h1 { font-size: clamp(3rem, 14vw, 4.4rem); }
+      .hero-name { font-size: clamp(3rem, 14vw, 4.4rem); }
+      .footer-shell { margin-left: 0; }
+      .hero-metrics-strip { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+      .metric-item { min-height: 125px; padding: 1rem; }
+      .metric-num { font-size: 2.5rem; }
+      .metric-caption { font-size: 0.72rem; line-height: 1.35; }
     }
   </style>
 </head>
 <body>
 
   <!-- Accessible Skip Navigation -->
-  <a href="#hero" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Clean & Minimalist Spatial Animation Backdrop -->
   <div class="spatial-backdrop" aria-hidden="true">
-    <video autoplay loop muted playsinline preload="metadata" class="spatial-video" id="spatialVideo" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260818_072341_50851634-bbc3-4c33-9acc-7647d4db44aa.mp4"></video>
     <div class="spatial-scrim"></div>
     <canvas class="particles-canvas" id="particlesCanvas"></canvas>
   </div>
 
-  <!-- Floating Liquid Glass Dock Navigation -->
+  <!-- Persistent portfolio navigation -->
   <nav class="nav-dock-wrapper" aria-label="Primary Navigation">
     <div class="nav-dock">
       <a href="#hero" class="dock-logo tactile-press" aria-label="Sunanda Tata Home">
@@ -1309,28 +1474,48 @@
         <span class="dock-logo-text">Sunanda Tata</span>
       </a>
 
+      <div class="sidebar-handle" aria-label="GitHub profile">
+        <span>@sunandatata</span>
+        <span class="sidebar-status-dot" aria-hidden="true"></span>
+      </div>
+
+      <div class="sidebar-role"><span class="pulse-dot" aria-hidden="true"></span><span>Software Engineer</span></div>
+
       <div class="dock-links">
         <div class="dock-indicator" id="dockIndicator" aria-hidden="true"></div>
-        <a href="#experience" class="dock-link tactile-press" data-target="experience">Experience</a>
-        <a href="#capabilities" class="dock-link tactile-press" data-target="capabilities">Capabilities</a>
-        <a href="#opensource" class="dock-link tactile-press" data-target="opensource">Open Source</a>
-        <a href="#projects" class="dock-link tactile-press" data-target="projects">Projects</a>
-        <a href="#education" class="dock-link tactile-press" data-target="education">Education</a>
+        <a href="#hero" class="dock-link tactile-press" data-target="hero"><span class="sidebar-link-icon" aria-hidden="true">⌂</span>Home</a>
+        <a href="#contact" class="dock-link tactile-press" data-target="contact"><span class="sidebar-link-icon" aria-hidden="true">✉</span>Hire Me</a>
+        <a href="#experience" class="dock-link tactile-press" data-target="experience"><span class="sidebar-link-icon" aria-hidden="true">▤</span>Work Experience</a>
+        <a href="#projects" class="dock-link tactile-press" data-target="projects"><span class="sidebar-link-icon" aria-hidden="true">⌘</span>Projects</a>
+        <a href="#opensource" class="dock-link tactile-press" data-target="opensource"><span class="sidebar-link-icon" aria-hidden="true">↗</span>Open Source</a>
+        <a href="#capabilities" class="dock-link tactile-press" data-target="capabilities"><span class="sidebar-link-icon" aria-hidden="true">◇</span>Skills</a>
+        <a href="#education" class="dock-link tactile-press" data-target="education"><span class="sidebar-link-icon" aria-hidden="true">▱</span>Education</a>
       </div>
 
       <div class="dock-actions">
-        <a href="./Sunanda_Software_Engineer.pdf" download class="btn btn-glass tactile-press" style="padding: 0.38rem 0.85rem; font-size: 0.8rem;" aria-label="Download Resume PDF">
+        <a href="./Sunandatata_Software_Engineer.pdf" download class="btn btn-glass tactile-press nav-resume" aria-label="Download Resume PDF">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>Resume</span>
         </a>
-        <a href="mailto:sunandatata.careers@gmail.com" class="btn btn-blue tactile-press" style="padding: 0.38rem 0.85rem; font-size: 0.8rem;" aria-label="Contact Sunanda via Email">
+        <a href="mailto:tatasunandav@gmail.com" class="btn btn-blue tactile-press nav-contact" aria-label="Contact Sunanda via Email">
           <span>Contact</span>
         </a>
+        <button type="button" class="btn btn-glass tactile-press mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
       </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+      <a href="#experience" class="mobile-menu-link" data-target="experience">Experience</a>
+      <a href="#capabilities" class="mobile-menu-link" data-target="capabilities">Capabilities</a>
+      <a href="#opensource" class="mobile-menu-link" data-target="opensource">Open Source</a>
+      <a href="#projects" class="mobile-menu-link" data-target="projects">Projects</a>
+      <a href="#education" class="mobile-menu-link" data-target="education">Education</a>
+      <a href="#contact" class="mobile-menu-link" data-target="contact">Contact</a>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     
     <!-- HERO SECTION -->
     <section class="hero-section" id="hero" aria-labelledby="hero-title">
@@ -1342,20 +1527,16 @@
           </div>
 
           <h1 class="display-h1" id="hero-title">
-            <span class="hero-name">Sunanda Tata</span>
-            <span class="hero-subhead">
-              <span class="hero-subhead-accent">Software Engineer</span>
-              <span class="hero-dot-separator" aria-hidden="true">&bull;</span>
-              <span>Distributed Systems &amp; AI Infrastructure</span>
-            </span>
+            <span class="hero-name">I build systems.</span>
+            <span class="hero-subhead"><span class="hero-subhead-accent">I ship reliable AI.</span></span>
           </h1>
 
           <p class="hero-lede">
-            Specializing in high-concurrency microservices, grounded Retrieval-Augmented Generation (RAG) pipelines, and enterprise data platforms. Track record across Pacific Life and Hitachi Vantara. Master of Science in Computer Science from CSU Fullerton.
+            I build dependable backend services, distributed systems, and AI applications that solve real problems. M.S. in Computer Science from CSU Fullerton, with 3+ years of experience across Pacific Life and Hitachi Vantara.
           </p>
 
           <div class="hero-actions-row">
-            <a href="./Sunanda_Software_Engineer.pdf" download class="btn btn-solid tactile-press">
+            <a href="./Sunandatata_Software_Engineer.pdf" download class="btn btn-solid tactile-press">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span>Download Resume</span>
             </a>
@@ -1376,15 +1557,15 @@
             </div>
             <div class="metric-item">
               <div class="metric-num">30<span class="accent">s</span></div>
-              <div class="metric-caption">Policy Lookup via Grounded RAG (from 15m)</div>
+              <div class="metric-caption">Guideline Retrieval via Grounded RAG (from 15m)</div>
             </div>
             <div class="metric-item">
               <div class="metric-num">1<span class="accent">M+</span></div>
-              <div class="metric-caption">Enterprise Metadata Records Scaled</div>
+              <div class="metric-caption">Enterprise Metadata Assets Indexed</div>
             </div>
             <div class="metric-item">
               <div class="metric-num">99.9<span class="accent">%</span></div>
-              <div class="metric-caption">Production Uptime &amp; SLA Compliance</div>
+              <div class="metric-caption">Workflow &amp; Pipeline Availability</div>
             </div>
           </div>
 
@@ -1416,36 +1597,35 @@
                 </div>
                 <div>
                   <h3 class="role-title">Software Developer Intern</h3>
-                  <div class="role-company">Pacific Life &bull; Newport Beach / San Jose, CA</div>
+                  <div class="role-company">Pacific Life &bull; Newport Beach, CA</div>
                 </div>
               </div>
               <span class="date-pill">JUN 2025 &mdash; MAR 2026</span>
             </div>
 
             <ul class="clean-bullets">
-              <li>Engineered a Python underwriting intelligence platform integrating <strong>ESRI REST APIs, LangChain, and LLM services</strong>, cutting manual geospatial review effort by <strong>75%</strong>.</li>
-              <li>Implemented a <strong>Redis cache-first architecture</strong> for geospatial coordinates and hazard boundaries, reducing external geocoding API consumption by <strong>35%</strong>.</li>
-              <li>Architected a grounded <strong>Retrieval-Augmented Generation (RAG)</strong> pipeline with embeddings and vector indexing, compressing policy lookup from <strong>15 minutes to 30 seconds per case</strong>.</li>
-              <li>Decreased LLM inference expenditure by <strong>28%</strong> by routing 70% of routine underwriting queries to <strong>Phi-3 Mini</strong> while reserving larger models for high-complexity claims.</li>
-              <li>Constructed exception remediation workflows using <strong>FastAPI, React.js, and TypeScript</strong>, reducing human exception handling from 8 minutes to 3 minutes.</li>
-              <li>Sustained <strong>99.9% availability</strong> across Kubernetes microservices with health checks, circuit breakers, regression test suites, and human-in-the-loop safeguards.</li>
+              <li>Reduced LLM inference costs by <strong>28%</strong> with a Python/FastAPI semantic routing service that directed 70% of routine underwriting requests to lightweight models, reserving larger models for complex risk evaluations.</li>
+              <li>Maintained <strong>99.9% underwriting workflow availability</strong> by hosting fault-tolerant backend services on Amazon EC2, using AWS Lambda for event-driven tasks, and implementing CloudWatch monitoring, automated retries, circuit breakers, and cache fallbacks.</li>
+              <li>Reduced manual property-risk review effort by <strong>75%</strong> by integrating Esri REST APIs with AWS Lambda workflows to automate environmental-hazard evaluations and return structured risk results to underwriting services.</li>
+              <li>Accelerated underwriting guideline retrieval from <strong>15 minutes to 30 seconds per application</strong> with a Python-based RAG pipeline using Amazon S3 document ingestion, vector search, and source-grounded REST API responses.</li>
+              <li>Expedited underwriting referral resolution from <strong>8 to 3 minutes per case</strong> with REST APIs and a React/TypeScript workbench using Spec-Driven Development, documented API contracts, and acceptance criteria; authored internal technical wikis and troubleshooting guides.</li>
             </ul>
 
             <div class="tags-row">
-              <span class="tag-chip">Python</span>
-              <span class="tag-chip">LangChain</span>
+              <span class="tag-chip">Python / FastAPI</span>
+              <span class="tag-chip">Esri REST APIs</span>
+              <span class="tag-chip">Semantic Routing</span>
               <span class="tag-chip">Grounded RAG</span>
-              <span class="tag-chip">Phi-3 Mini</span>
-              <span class="tag-chip">Redis</span>
-              <span class="tag-chip">FastAPI</span>
+              <span class="tag-chip">Amazon S3</span>
+              <span class="tag-chip">AWS Lambda</span>
               <span class="tag-chip">React / TypeScript</span>
-              <span class="tag-chip">Kubernetes</span>
+              <span class="tag-chip">Amazon EKS</span>
             </div>
           </article>
 
           <!-- Hitachi Vantara - Full Time -->
           <article class="apple-card">
-            <div class="role-row">
+        <div class="role-row">
               <div class="role-meta">
                 <div class="company-monogram" style="background: linear-gradient(135deg, #e60012 0%, #99000c 100%); border-color: rgba(255, 120, 120, 0.45); box-shadow: 0 4px 16px rgba(230, 0, 18, 0.4); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;" title="Hitachi Vantara" aria-label="Hitachi Vantara logo">
                   <svg width="38" height="7" viewBox="0 0 224.896 35.894" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));">
@@ -1455,18 +1635,18 @@
                 </div>
                 <div>
                   <h3 class="role-title">Software Engineer</h3>
-                  <div class="role-company">Hitachi Vantara &bull; Enterprise Data Platforms</div>
+                  <div class="role-company">Hitachi Vantara &bull; Bengaluru, India</div>
                 </div>
               </div>
               <span class="date-pill">AUG 2022 &mdash; AUG 2024</span>
             </div>
 
             <ul class="clean-bullets">
-              <li>Scaled <strong>Lumada Data Catalog</strong> to ingest and expose <strong>1,000,000+ enterprise metadata records</strong> via Java and Spring Boot microservice REST APIs.</li>
-              <li>Engineered high-throughput <strong>Spring Batch and Apache Kafka</strong> data replication pipelines, reducing cross-system metadata synchronization latency by <strong>45%</strong>.</li>
-              <li>Built reactive asynchronous data services with <strong>Spring WebFlux and React.js</strong>, decreasing enterprise reporting query latency by <strong>40%</strong>.</li>
-              <li>Maintained <strong>99.9% service availability</strong> across enterprise SLAs using Spring Integration, JPA/Hibernate, and resilient circuit breakers.</li>
-              <li>Automated CI/CD deployment pipelines spanning <strong>AWS, Azure, Docker, Kubernetes, and Jenkins</strong>, reducing regression testing cycles by <strong>60%</strong>.</li>
+              <li>Expanded metadata indexing to <strong>1M+ enterprise assets</strong> by developing scalable Java/Spring Boot REST APIs for Lumada Data Catalog, integrating automated metadata harvesting and schema discovery across databases and data lakes.</li>
+              <li>Improved cross-environment metadata synchronization speed by <strong>45%</strong> by publishing metadata-change events through Apache Kafka, processing batch synchronization with Spring Batch, and using Amazon S3 for intermediate data storage.</li>
+              <li>Protected <strong>99.9% ingestion-pipeline availability</strong> by operating Java microservices on Amazon EC2, implementing retry queues and fault-tolerant event processing, and participating in on-call rotations to troubleshoot production incidents.</li>
+              <li>Achieved <strong>40% lower metadata search latency</strong> by migrating blocking REST endpoints to non-blocking Spring WebFlux microservices and developing React dashboards for real-time asset-hierarchy visualization.</li>
+              <li>Delivered <strong>60% faster regression-testing cycles</strong> by automating Jenkins CI/CD pipelines for Docker-containerized microservices on Amazon EKS, integrating CloudWatch monitoring, and authoring internal deployment wikis and incident-response runbooks.</li>
             </ul>
 
             <div class="tags-row">
@@ -1475,45 +1655,12 @@
               <span class="tag-chip">Spring WebFlux</span>
               <span class="tag-chip">Apache Kafka</span>
               <span class="tag-chip">JPA / Hibernate</span>
-              <span class="tag-chip">AWS &amp; Azure</span>
+              <span class="tag-chip">Amazon EC2 / S3 / EKS</span>
               <span class="tag-chip">Docker</span>
               <span class="tag-chip">Kubernetes</span>
             </div>
           </article>
 
-          <!-- Hitachi Vantara - Co-Op -->
-          <article class="apple-card">
-            <div class="role-row">
-              <div class="role-meta">
-                <div class="company-monogram" style="background: linear-gradient(135deg, #e60012 0%, #99000c 100%); border-color: rgba(255, 120, 120, 0.45); box-shadow: 0 4px 16px rgba(230, 0, 18, 0.4); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;" title="Hitachi Vantara" aria-label="Hitachi Vantara logo">
-                  <svg width="38" height="7" viewBox="0 0 224.896 35.894" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));">
-                    <path d="M148.51 0c-9.33-.062-20.703 3.807-20.763 17.858-.06 13.91 11.553 18.3 20.763 18.024 8.561-.255 18.013-2.634 18.445-13.105l-9.463.021c-.267 6.58-5.517 7.885-8.982 7.896-3.555.013-10.79-.735-10.904-12.695-.108-11.289 6.533-12.885 10.904-12.837 4.371.048 8.707 2.087 8.756 7.227l9.401-.008C166.571 6.088 161.131.085 148.51 0ZM0 .638V35.2h9.15V19.947h18.518V35.2h9.193V.637h-9.193V14.47H9.15V.637Zm44.452 0v34.56h9.213V.638Zm12.623 0v5.717h13.419v28.838h9.114V6.354H93.03V.637Zm114.367 0V35.2h9.15V19.947h18.518V35.2h9.15V.637h-9.15V14.47h-18.517V.637Zm44.231 0v34.56h9.223V.638ZM101.541.689l-16.385 34.51h10.281l3.195-7.754 17.313-.006 3.187 7.76h10.306L113.128.689Zm5.763 5.836 6.332 15.42-12.717.008z"/>
-                  </svg>
-                  <span style="font-size: 7px; font-weight: 750; letter-spacing: 0.12em; color: #ffffff; text-transform: uppercase; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1;">VANTARA</span>
-                </div>
-                <div>
-                  <h3 class="role-title">Software Engineer (Co-Op)</h3>
-                  <div class="role-company">Hitachi Vantara</div>
-                </div>
-              </div>
-              <span class="date-pill">JAN 2022 &mdash; AUG 2022</span>
-            </div>
-
-            <ul class="clean-bullets">
-              <li>Improved <strong>Pentaho business analytics</strong> query processing performance by <strong>15%</strong> through optimized Java services and SQL schema refactoring.</li>
-              <li>Delivered <strong>8+ technical demonstrations</strong> to cross-functional stakeholders and product leadership during fast-paced Agile sprint cycles.</li>
-              <li>Constructed containerized test harnesses with <strong>Docker and Python</strong>, reducing environment provisioning and smoke testing overhead by <strong>50%</strong>.</li>
-            </ul>
-
-            <div class="tags-row">
-              <span class="tag-chip">Java</span>
-              <span class="tag-chip">SQL</span>
-              <span class="tag-chip">Python</span>
-              <span class="tag-chip">Docker</span>
-              <span class="tag-chip">Pentaho Analytics</span>
-              <span class="tag-chip">Agile</span>
-            </div>
-          </article>
 
         </div>
       </div>
@@ -1533,13 +1680,13 @@
 
         <!-- Apple Segmented Filter -->
         <div class="filter-dock-wrapper">
-          <div class="filter-dock" role="tablist" aria-label="Capabilities Filter">
+          <div class="filter-dock" role="group" aria-label="Filter capabilities by discipline">
             <div class="filter-indicator" id="filterIndicator" aria-hidden="true"></div>
-            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Disciplines</button>
-            <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI &amp; Machine Learning</button>
-            <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">Backend &amp; Distributed</button>
-            <button class="filter-btn" data-filter="cloud" role="tab" aria-selected="false">Cloud &amp; DevOps</button>
-            <button class="filter-btn" data-filter="languages" role="tab" aria-selected="false">Languages &amp; Core</button>
+            <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Disciplines</button>
+            <button type="button" class="filter-btn" data-filter="ai" aria-pressed="false">AI &amp; Machine Learning</button>
+            <button type="button" class="filter-btn" data-filter="backend" aria-pressed="false">Backend &amp; Distributed</button>
+            <button type="button" class="filter-btn" data-filter="cloud" aria-pressed="false">Cloud &amp; DevOps</button>
+            <button type="button" class="filter-btn" data-filter="languages" aria-pressed="false">Languages &amp; Core</button>
           </div>
         </div>
 
@@ -1555,10 +1702,10 @@
                   </div>
                   <div>
                     <h3 class="bento-title">AI &amp; Machine Learning</h3>
-                    <p class="bento-subtitle">Grounded RAG, Autonomous Agents &amp; Model Optimization</p>
+                    <p class="bento-subtitle">Grounded RAG, Semantic Routing &amp; Model Optimization</p>
                   </div>
                 </div>
-                <span class="bento-proof-pill">75% Review Compression &bull; Sub-30s Retrieval</span>
+                <span class="bento-proof-pill">75% Review Reduction &bull; 30-Second Retrieval</span>
               </div>
 
               <div class="bento-groups">
@@ -1566,22 +1713,19 @@
                   <span class="bento-group-label">Retrieval Architecture &amp; Vector Search</span>
                   <div class="bento-chips-row">
                     <span class="bento-chip">Grounded RAG</span>
-                    <span class="bento-chip">Vector Databases</span>
-                    <span class="bento-chip">Semantic Search</span>
-                    <span class="bento-chip">Dense &amp; Sparse Embeddings</span>
-                    <span class="bento-chip">Knowledge Graphs</span>
-                    <span class="bento-chip">Hierarchical Chunking</span>
+                    <span class="bento-chip">Vector Search</span>
+                    <span class="bento-chip">Semantic Routing</span>
+                    <span class="bento-chip">Embeddings</span>
                   </div>
                 </div>
                 <div class="bento-group">
                   <span class="bento-group-label">Agentic Workflows &amp; Inference</span>
                   <div class="bento-chips-row">
                     <span class="bento-chip">LangChain</span>
-                    <span class="bento-chip">LLM Agents</span>
-                    <span class="bento-chip">Phi-3 Mini</span>
+                    <span class="bento-chip">LLMs</span>
+                    <span class="bento-chip">AI Agents</span>
                     <span class="bento-chip">RoBERTa &amp; T5</span>
-                    <span class="bento-chip">Prompt Engineering</span>
-                    <span class="bento-chip">Inference Cost Routing</span>
+                    <span class="bento-chip">Model Routing</span>
                   </div>
                 </div>
               </div>
@@ -1613,13 +1757,16 @@
                     <span class="bento-chip">FastAPI</span>
                     <span class="bento-chip">Apache Kafka</span>
                     <span class="bento-chip">Spring Batch</span>
+                    <span class="bento-chip">Spring Integration</span>
                     <span class="bento-chip">REST APIs</span>
+                    <span class="bento-chip">Microservices</span>
+                    <span class="bento-chip">Node.js</span>
                   </div>
                 </div>
                 <div class="bento-group">
                   <span class="bento-group-label">Persistence &amp; Cache Tier</span>
                   <div class="bento-chips-row">
-                    <span class="bento-chip">Redis (Cache-First)</span>
+                    <span class="bento-chip">Amazon S3</span>
                     <span class="bento-chip">PostgreSQL</span>
                     <span class="bento-chip">MySQL</span>
                     <span class="bento-chip">MongoDB</span>
@@ -1652,7 +1799,7 @@
                   <div class="bento-chips-row">
                     <span class="bento-chip">Kubernetes</span>
                     <span class="bento-chip">Docker</span>
-                    <span class="bento-chip">AWS (EC2, S3, RDS)</span>
+                    <span class="bento-chip">AWS (EC2, S3, EKS, Lambda)</span>
                     <span class="bento-chip">Microsoft Azure</span>
                     <span class="bento-chip">GCP</span>
                   </div>
@@ -1661,8 +1808,10 @@
                   <span class="bento-group-label">Infrastructure as Code &amp; Telemetry</span>
                   <div class="bento-chips-row">
                     <span class="bento-chip">Terraform</span>
-                    <span class="bento-chip">GitHub Actions</span>
+                    <span class="bento-chip">CloudWatch</span>
                     <span class="bento-chip">Jenkins</span>
+                    <span class="bento-chip">CI/CD</span>
+                    <span class="bento-chip">Git</span>
                     <span class="bento-chip">Prometheus</span>
                     <span class="bento-chip">Grafana</span>
                   </div>
@@ -1689,24 +1838,24 @@
 
               <div class="bento-groups">
                 <div class="bento-group">
-                  <span class="bento-group-label">Core Languages</span>
+                  <span class="bento-group-label">Languages &amp; Web</span>
                   <div class="bento-chips-row">
                     <span class="bento-chip">Python</span>
                     <span class="bento-chip">Java</span>
                     <span class="bento-chip">TypeScript</span>
                     <span class="bento-chip">JavaScript</span>
-                    <span class="bento-chip">Go (Golang)</span>
                     <span class="bento-chip">SQL</span>
+                    <span class="bento-chip">HTML</span>
+                    <span class="bento-chip">CSS</span>
+                    <span class="bento-chip">React</span>
                   </div>
                 </div>
                 <div class="bento-group">
-                  <span class="bento-group-label">Computer Science Core</span>
+                  <span class="bento-group-label">Engineering Practices</span>
                   <div class="bento-chips-row">
                     <span class="bento-chip">Distributed Systems</span>
-                    <span class="bento-chip">Data Structures &amp; Algorithms</span>
-                    <span class="bento-chip">OOP Design Patterns</span>
-                    <span class="bento-chip">TDD &amp; Regression Testing</span>
-                    <span class="bento-chip">Agile Sprints</span>
+                    <span class="bento-chip">TDD</span>
+                    <span class="bento-chip">Automated Integration Testing</span>
                   </div>
                 </div>
               </div>
@@ -1740,7 +1889,7 @@
               <div>
                 <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
                   <h3 class="role-title">RAGFlow</h3>
-                  <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.65rem; border-radius: var(--radius-full); border: 1px solid rgba(41, 151, 255, 0.25);">Verified Contributor</span>
+                  <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.65rem; border-radius: var(--radius-full); border: 1px solid rgba(41, 151, 255, 0.25);">Open Source Contributor</span>
                 </div>
                 <div class="role-company" style="color: var(--text-secondary);">infiniflow/ragflow &bull; Deep Document Retrieval Engine</div>
               </div>
@@ -1754,7 +1903,7 @@
           <ul class="clean-bullets">
             <li>Identified and resolved <strong>parameter-precedence handling bugs</strong> across <strong>20+ regression test scenarios</strong>, guaranteeing that client top-k parameters, similarity thresholds, and rerank configurations take deterministic priority.</li>
             <li>Restored correct <strong>top-k ranking ordering</strong> across <strong>25+ reranking test cases</strong> by enforcing sorting of reranked semantic chunks prior to pagination limits.</li>
-            <li>Extended <strong>AI Agent conversation memory retrieval across 3 languages</strong>, verifying multi-lingual stability through <strong>15+ automated integration tests</strong>.</li>
+            <li>Extended <strong>AI Agent conversation memory retrieval across 3 languages</strong>, verifying multilingual stability through <strong>15+ automated integration tests</strong>.</li>
           </ul>
 
           <div class="tags-row">
@@ -1776,19 +1925,47 @@
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
             <span>04 / Systems in Action</span>
           </p>
-          <h2 class="section-title" id="projects-title">Systems designed for concurrency, intelligence, and defense.</h2>
-          <p class="section-subtitle">Clean, functional architectures complete with real-time WebSockets and adversarial ML pipelines.</p>
+          <h2 class="section-title" id="projects-title">Systems designed for retrieval, concurrency, and defense.</h2>
+          <p class="section-subtitle">Hybrid enterprise search, real-time distributed systems, and adversarial ML pipelines.</p>
         </div>
 
         <div class="projects-grid">
           
+          <!-- ChronoMind -->
+          <article class="project-card">
+            <div class="project-schematic">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-blue);">HYBRID ENTERPRISE RETRIEVAL</span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">100K+ DOCUMENTS</span>
+              </div>
+              <div class="schematic-nodes">
+                <div class="schematic-node"><span>Dense Vectors</span></div>
+                <div class="schematic-node" style="border-color: var(--apple-blue); color: var(--apple-blue);"><span>Hybrid Fusion</span></div>
+                <div class="schematic-node"><span>Knowledge Graph</span></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-tertiary);">
+                <span>Qdrant + Neo4j</span><span>Sub-120ms Retrieval</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="tag-chip">18% Recall@10 Gain</span><span class="tag-chip">0.14 MRR Gain</span><span class="tag-chip">Sub-120ms</span>
+              </div>
+              <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">ChronoMind &mdash; Enterprise RAG &amp; Vector Search Engine</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">Hybrid retrieval combines dense vector search, sparse BM25, knowledge-graph traversal, and cross-encoder reranking with Qdrant, Neo4j, and LangChain. Redis caching and parallel candidate generation keep retrieval under 120ms across 100K+ documents.</p>
+              <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
+                <span class="tag-chip">Qdrant</span><span class="tag-chip">Neo4j</span><span class="tag-chip">LangChain</span><span class="tag-chip">BM25</span><span class="tag-chip">Redis</span>
+              </div>
+            </div>
+          </article>
+
           <!-- Ride Matching Platform -->
           <article class="project-card">
             <!-- Architectural Blueprint Header (Razor-sharp SVG schematic, zero blurry images) -->
             <div class="project-schematic">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-blue);">TOPOLOGY: BI-DIRECTIONAL DISPATCH</span>
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">WS_CONNECTED: &lt;15ms</span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">7-STAGE LIVE SYNC</span>
               </div>
               <div class="schematic-nodes">
                 <div class="schematic-node">
@@ -1820,7 +1997,7 @@
               <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">Ride Matching Platform</h3>
               
               <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">
-                Distributed dispatch system featuring three distinct <strong>React / TypeScript web apps</strong> (Rider, Driver, and Dispatch Operations). Orchestrates a 7-stage ride lifecycle with low-latency WebSocket synchronization, live ETA calculation, and automated container deployment.
+                Resilient real-time ride dispatch built with <strong>Node.js, Express, TypeScript, and React</strong>, separating seven backend domains to isolate location tracking from dispatch. Atomic state transitions with distributed locks prevent multiple drivers accepting one ride; WebSocket heartbeat reconnects, state hydration, and idempotency keys keep clients and booking/payment retries consistent. Verified under network partitions and high concurrency with 11+ Docker integration test suites.
               </p>
 
               <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
@@ -1846,7 +2023,7 @@
             <div class="project-schematic">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-cyan);">DEFENSE PIPELINE: ADVERSARIAL STRESS</span>
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">CONFIDENCE: 98.2%</span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">REPEATABLE EVALUATION</span>
               </div>
               <div class="schematic-nodes">
                 <div class="schematic-node">
@@ -1878,7 +2055,7 @@
               <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">AI2-SED Defense Framework</h3>
               
               <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">
-                Adversarial machine learning pipeline for phishing detection combining <strong>RoBERTa transformer representations</strong> and URL structural extractors. Evaluates resilience using a <strong>T5-powered synthetic evasion pipeline</strong> that adaptively stresses classifiers.
+                Phishing-defense pipeline combining a <strong>fine-tuned RoBERTa classifier</strong> and URL heuristics with a <strong>T5 generative attack engine</strong> to simulate evasion. Iterative red-team training and confidence-calibrated ensembling raised robustness by 22% against semantic and lexical perturbations.
               </p>
 
               <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
@@ -1922,12 +2099,9 @@
             </div>
             <div>
               <h3 style="font-size: 1.25rem; font-weight: 600; color: #ffffff;">California State University, Fullerton</h3>
-              <p style="font-size: 0.95rem; color: var(--apple-blue); font-weight: 500;">Master of Science, Computer Science &bull; Graduated May 2026</p>
-              <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: 0.2rem;">Graduate focus: Distributed Systems, Advanced Algorithms, Machine Learning &amp; Cloud Native Architecture.</p>
+              <p style="font-size: 0.95rem; color: var(--apple-blue); font-weight: 500;">Master of Science, Computer Science &bull; Aug 2024 &mdash; May 2026</p>
+              <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: 0.2rem;">Fullerton, California</p>
             </div>
-          </div>
-          <div style="background: rgba(48, 209, 88, 0.1); color: var(--apple-mint); border: 1px solid rgba(48, 209, 88, 0.25); padding: 0.45rem 1rem; border-radius: var(--radius-full); font-family: var(--font-mono); font-size: 0.88rem; font-weight: 600;">
-            GPA: 3.7 / 4.0
           </div>
         </article>
       </div>
@@ -1946,9 +2120,13 @@
           </div>
 
           <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem;">
-            <a href="mailto:sunandatata.careers@gmail.com" class="btn btn-blue tactile-press" style="padding: 0.75rem 1.6rem; font-size: 0.95rem;">
+        <a href="mailto:tatasunandav@gmail.com" class="btn btn-blue tactile-press" style="padding: 0.75rem 1.6rem; font-size: 0.95rem;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span>sunandatata.careers@gmail.com</span>
+              <span>tatasunandav@gmail.com</span>
+            </a>
+            <a href="tel:+16507649023" class="btn btn-glass tactile-press" style="padding: 0.75rem 1.6rem; font-size: 0.95rem;" aria-label="Call Sunanda Tata">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (650) 764-9023</span>
             </a>
             <a href="https://www.linkedin.com/in/tata-sunanda/" target="_blank" rel="noopener noreferrer" class="btn btn-glass tactile-press" style="padding: 0.75rem 1.6rem; font-size: 0.95rem;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -1974,7 +2152,8 @@
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/tata-sunanda/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/sunandatata" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="mailto:sunandatata.careers@gmail.com">Email</a>
+        <a href="tel:+16507649023">Phone</a>
+        <a href="mailto:tatasunandav@gmail.com">Email</a>
       </div>
     </div>
   </footer>
@@ -1985,37 +2164,13 @@
     <span id="toastMessage">Email copied to clipboard!</span>
   </div>
 
-  <!-- Lenis Modern Smooth Momentum Scrolling Engine -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-
   <script>
     (function () {
       'use strict';
 
-      // 0. Apple Fluid Momentum Scrolling Engine (Lenis)
-      var lenisInstance = null;
-      if (typeof Lenis !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        lenisInstance = new Lenis({
-          duration: 1.15,
-          easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
-          orientation: 'vertical',
-          gestureOrientation: 'vertical',
-          smoothWheel: true,
-          wheelMultiplier: 1.0,
-          smoothTouch: false,
-          touchMultiplier: 1.5,
-          infinite: false
-        });
+      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        function raf(time) {
-          lenisInstance.raf(time);
-          requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-        window.lenis = lenisInstance;
-      }
-
-      // 1. Tactile Haptic Feedback (Zero Latency on Pointer-Down)
+      // 1. Haptic feedback for meaningful state changes
       function triggerHaptic(duration) {
         try {
           if (navigator.vibrate) {
@@ -2024,16 +2179,13 @@
         } catch (e) {}
       }
 
-      document.querySelectorAll('.tactile-press').forEach(function (el) {
-        el.addEventListener('pointerdown', function () {
-          triggerHaptic(6);
-        }, { passive: true });
-      });
-
       // 2. Floating Dock Active Capsule Navigation
       var dockIndicator = document.getElementById('dockIndicator');
       var dockLinks = document.querySelectorAll('.dock-link');
       var dockLogo = document.querySelector('.dock-logo');
+      var mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      var mobileMenu = document.getElementById('mobileMenu');
+      var mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
       var sections = [];
 
       dockLinks.forEach(function (link) {
@@ -2061,14 +2213,59 @@
             l.removeAttribute('aria-current');
           }
         });
+
+        mobileMenuLinks.forEach(function (link) {
+          var isActive = link.getAttribute('data-target') === activeLink.getAttribute('data-target');
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
       }
 
       function clearDockIndicator() {
         if (!dockIndicator) return;
         dockIndicator.style.opacity = '0';
         dockLinks.forEach(function (l) {
-          l.classList.remove('active');
-          l.removeAttribute('aria-current');
+          var isHome = l.getAttribute('data-target') === 'hero';
+          l.classList.toggle('active', isHome);
+          if (isHome) l.setAttribute('aria-current', 'page');
+          else l.removeAttribute('aria-current');
+        });
+        mobileMenuLinks.forEach(function (link) {
+          link.classList.remove('active');
+          link.removeAttribute('aria-current');
+        });
+      }
+
+      function setMobileMenu(open, returnFocus) {
+        if (!mobileMenuToggle || !mobileMenu) return;
+        mobileMenuToggle.setAttribute('aria-expanded', String(open));
+        mobileMenuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        mobileMenu.setAttribute('aria-hidden', String(!open));
+        mobileMenu.inert = !open;
+        mobileMenu.classList.toggle('is-open', open);
+        if (!open && returnFocus) mobileMenuToggle.focus();
+      }
+
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function () {
+          setMobileMenu(mobileMenuToggle.getAttribute('aria-expanded') !== 'true');
+        });
+        mobileMenuLinks.forEach(function (link) {
+          link.addEventListener('click', function () { setMobileMenu(false); });
+        });
+        document.addEventListener('pointerdown', function (event) {
+          if (mobileMenuToggle.getAttribute('aria-expanded') === 'true' && !event.target.closest('.nav-dock-wrapper')) {
+            setMobileMenu(false);
+          }
+        }, { passive: true });
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && mobileMenuToggle.getAttribute('aria-expanded') === 'true') {
+            setMobileMenu(false, true);
+          }
         });
       }
 
@@ -2076,11 +2273,8 @@
       if (dockLogo) {
         dockLogo.addEventListener('click', function (e) {
           e.preventDefault();
-          if (lenisInstance) {
-            lenisInstance.scrollTo(0, { duration: 1.15 });
-          } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
+          history.pushState(null, '', '#hero');
+          window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
           clearDockIndicator();
         });
       }
@@ -2102,46 +2296,47 @@
         }
       }
 
-      if (lenisInstance) {
-        lenisInstance.on('scroll', onScrollCheck);
-      } else {
-        window.addEventListener('scroll', onScrollCheck, { passive: true });
-      }
+      window.addEventListener('scroll', onScrollCheck, { passive: true });
 
       if (window.scrollY < 180) {
         clearDockIndicator();
       }
 
-      // 3. Smooth Anchor Navigation (Lenis Eased Offset Scroll)
+      // 3. Smooth Anchor Navigation
       document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
           var targetId = this.getAttribute('href');
-          if (!targetId || targetId === '#' || targetId === '#main') return;
-          var targetEl = document.querySelector(targetId);
+          if (!targetId || targetId === '#' || this.classList.contains('skip-link')) return;
+          var targetEl = null;
+          try {
+            targetEl = document.querySelector(targetId);
+          } catch (error) {
+            return;
+          }
           if (targetEl) {
             e.preventDefault();
-            if (lenisInstance) {
-              lenisInstance.scrollTo(targetEl, { offset: -80, duration: 1.15 });
-            } else {
-              var targetOffset = targetEl.getBoundingClientRect().top + window.pageYOffset - 80;
-              window.scrollTo({
-                top: targetOffset,
-                behavior: 'smooth'
-              });
+            if (window.location.hash !== targetId) history.pushState(null, '', targetId);
+            var targetOffset = targetEl.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({
+              top: targetOffset,
+              behavior: reducedMotion ? 'auto' : 'smooth'
+            });
+            if (e.detail === 0) {
+              targetEl.setAttribute('tabindex', '-1');
+              window.setTimeout(function () { targetEl.focus({ preventScroll: true }); }, reducedMotion ? 0 : 500);
             }
           }
         });
       });
 
       if (window.location.hash) {
-        var initialTarget = document.querySelector(window.location.hash);
+        var initialTarget = null;
+        try {
+          initialTarget = document.querySelector(window.location.hash);
+        } catch (error) {}
         if (initialTarget) {
           setTimeout(function () {
-            if (lenisInstance) {
-              lenisInstance.scrollTo(initialTarget, { offset: -80, immediate: true });
-            } else {
-              initialTarget.scrollIntoView({ behavior: 'auto' });
-            }
+            initialTarget.scrollIntoView({ behavior: 'auto' });
           }, 150);
         }
       }
@@ -2170,10 +2365,10 @@
         btn.addEventListener('click', function () {
           filterBtns.forEach(function (b) {
             b.classList.remove('active');
-            b.setAttribute('aria-selected', 'false');
+            b.setAttribute('aria-pressed', 'false');
           });
           btn.classList.add('active');
-          btn.setAttribute('aria-selected', 'true');
+          btn.setAttribute('aria-pressed', 'true');
           updateFilterIndicator(btn);
           triggerHaptic(8);
 
@@ -2192,29 +2387,36 @@
             }
           });
 
-          // Inform Lenis momentum engine that page height changed
-          if (lenisInstance) {
-            lenisInstance.resize();
-          }
         });
       });
 
       // 5. Interactive Hardware Spotlight Sheen (Design Engineering)
       var spotlightCards = document.querySelectorAll('.apple-card, .project-card, .bento-card');
-      spotlightCards.forEach(function (card) {
-        card.addEventListener('pointermove', function (e) {
-          var rect = card.getBoundingClientRect();
-          var x = e.clientX - rect.left;
-          var y = e.clientY - rect.top;
-          card.style.setProperty('--mouse-x', x + 'px');
-          card.style.setProperty('--mouse-y', y + 'px');
-        }, { passive: true });
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        spotlightCards.forEach(function (card) {
+          var frame = null;
+          var pointerX = 0;
+          var pointerY = 0;
+          card.addEventListener('pointermove', function (e) {
+            pointerX = e.clientX;
+            pointerY = e.clientY;
+            if (frame) return;
+            frame = requestAnimationFrame(function () {
+              var rect = card.getBoundingClientRect();
+              card.style.setProperty('--mouse-x', (pointerX - rect.left) + 'px');
+              card.style.setProperty('--mouse-y', (pointerY - rect.top) + 'px');
+              frame = null;
+            });
+          }, { passive: true });
 
-        card.addEventListener('pointerleave', function () {
-          card.style.removeProperty('--mouse-x');
-          card.style.removeProperty('--mouse-y');
-        }, { passive: true });
-      });
+          card.addEventListener('pointerleave', function () {
+            if (frame) cancelAnimationFrame(frame);
+            frame = null;
+            card.style.removeProperty('--mouse-x');
+            card.style.removeProperty('--mouse-y');
+          }, { passive: true });
+        });
+      }
 
       // 5. Toast Notification & Email Copy
       var toastEl = document.getElementById('appleToast');
@@ -2234,16 +2436,32 @@
       var copyBtn = document.getElementById('copyEmailBtn');
       if (copyBtn) {
         copyBtn.addEventListener('click', function () {
-          navigator.clipboard.writeText('sunandatata.careers@gmail.com').then(function () {
-            showToast('Email address copied to clipboard');
-          }).catch(function () {
-            showToast('sunandatata.careers@gmail.com');
-          });
+          var email = 'tatasunandav@gmail.com';
+          function copyFallback() {
+            var field = document.createElement('textarea');
+            field.value = email;
+            field.setAttribute('readonly', '');
+            field.style.position = 'fixed';
+            field.style.opacity = '0';
+            document.body.appendChild(field);
+            field.select();
+            var copied = false;
+            try { copied = document.execCommand('copy'); } catch (error) {}
+            field.remove();
+            showToast(copied ? 'Email address copied to clipboard' : email);
+          }
+
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(email).then(function () {
+              showToast('Email address copied to clipboard');
+            }).catch(copyFallback);
+          } else {
+            copyFallback();
+          }
         });
       }
 
-      // 6. GPU & Lifecycle-Aware Video and Canvas Optimizer
-      var videoEl = document.getElementById('spatialVideo');
+      // 6. Lifecycle-Aware Canvas Optimizer
       var canvas = document.getElementById('particlesCanvas');
       var isPageVisible = !document.hidden;
       var isHeroInView = true;
@@ -2251,14 +2469,7 @@
       var drawParticlesFunc = null;
 
       function updateMediaLifecycle() {
-        var shouldRun = isPageVisible && isHeroInView && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (videoEl) {
-          if (shouldRun) {
-            if (videoEl.paused) videoEl.play().catch(function () {});
-          } else {
-            if (!videoEl.paused) videoEl.pause();
-          }
-        }
+        var shouldRun = isPageVisible && isHeroInView && !reducedMotion;
         if (canvas && drawParticlesFunc) {
           if (shouldRun && !isCanvasRunning) {
             isCanvasRunning = true;
@@ -2286,7 +2497,7 @@
       }
 
       // 7. Ambient Particle Network (Optimized 2-Pass Physics)
-      if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (canvas && !reducedMotion) {
         var ctx = canvas.getContext('2d');
         var particles = [];
         var dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -2407,6 +2618,25 @@
           clearTimeout(resizeTimer);
           resizeTimer = setTimeout(resizeCanvas, 120);
         }, { passive: true });
+      }
+
+      var layoutTimer = null;
+      window.addEventListener('resize', function () {
+        clearTimeout(layoutTimer);
+        layoutTimer = setTimeout(function () {
+          var activeDockLink = document.querySelector('.dock-link.active');
+          if (activeDockLink) updateDock(activeDockLink);
+          var activeFilter = document.querySelector('.filter-btn.active');
+          if (activeFilter) updateFilterIndicator(activeFilter);
+          if (window.innerWidth > 960) setMobileMenu(false);
+        }, 120);
+      }, { passive: true });
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () {
+          var activeFilter = document.querySelector('.filter-btn.active');
+          if (activeFilter) updateFilterIndicator(activeFilter);
+        });
       }
 
     })();

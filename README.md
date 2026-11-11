@@ -4,11 +4,9 @@
 
 ### Software Engineer | AI/ML Engineering | Distributed Systems | Full-Stack Development
 
-San Jose, California
+Building scalable backend services, distributed systems, and AI-enabled platforms.
 
-Building AI-powered workflows, enterprise data platforms, retrieval systems, and real-time full-stack products.
-
-[![Email](https://img.shields.io/badge/Email-sunandatata.careers%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sunandatata.careers@gmail.com)
+[![Email](https://img.shields.io/badge/Email-tatasunandav%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:tatasunandav@gmail.com)
 [![Phone](https://img.shields.io/badge/Phone-%2B1%20650--764--9023-2563EB?style=flat&logo=phone&logoColor=white)](tel:+16507649023)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-tata--sunanda-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tata-sunanda/)
 [![GitHub](https://img.shields.io/badge/GitHub-sunandatata-181717?style=flat&logo=github&logoColor=white)](https://github.com/sunandatata)
@@ -19,14 +17,14 @@ Building AI-powered workflows, enterprise data platforms, retrieval systems, and
 
 ## About Me
 
-Software engineer with experience building AI-powered underwriting systems, enterprise metadata platforms, retrieval pipelines, and real-time full-stack applications. I earned my **M.S. in Computer Science from California State University, Fullerton (May 2026)** and have worked across **Pacific Life and Hitachi Vantara**, alongside open-source contributions to **RAGFlow**.
+Software Engineer with 3+ years of experience building scalable backend services, distributed systems, and AI-enabled platforms using Java, Python, Spring Boot, React, Apache Kafka, and AWS. I earned my **M.S. in Computer Science from California State University, Fullerton (May 2026)** and have worked across **Pacific Life and Hitachi Vantara**, alongside open-source contributions to **RAGFlow**.
 
 ### Highlights
 
 * Reduced manual geospatial review effort by **75%** with a Python, ESRI, LangChain, and LLM underwriting platform.
-* Reduced underwriting policy lookup from **15 minutes to 30 seconds** with grounded RAG.
+* Reduced underwriting guideline and rule retrieval from **15 minutes to 30 seconds** with grounded RAG.
 * Lowered LLM inference costs by **28%** through model-routing optimization.
-* Scaled Lumada Data Catalog to **1M+ enterprise metadata records**.
+* Scaled Lumada Data Catalog to **1M+ enterprise metadata assets**.
 * Maintained **99.9% availability** across AI workflows and enterprise metadata services.
 * Improved retrieval correctness and multilingual behavior through RAGFlow contributions.
 
@@ -36,23 +34,23 @@ Software engineer with experience building AI-powered underwriting systems, ente
 
 ### Programming Languages
 
-`Python` `Java` `JavaScript` `TypeScript` `Go` `SQL` `HTML/CSS`
+`Java` `Python` `JavaScript` `TypeScript` `SQL` `HTML` `CSS`
 
 ### AI & Machine Learning
 
-`Generative AI` `LLMs` `Machine Learning` `NLP` `LangChain` `RAG` `AI Agents` `Prompt Engineering` `Embeddings` `Semantic Search` `Vector Databases` `Knowledge Graphs` `RoBERTa` `T5`
+`LLMs` `RAG` `LangChain` `Embeddings` `Vector Search` `Semantic Routing` `RoBERTa` `T5` `Phi-3 Mini`
 
 ### Full-Stack & Backend
 
-`React.js` `Node.js` `FastAPI` `Spring Boot` `Spring WebFlux` `REST APIs` `Microservices` `JSON` `PostgreSQL` `MySQL` `MongoDB` `Redis`
+`Spring Boot` `Spring WebFlux` `Spring Batch` `Spring Integration` `REST APIs` `Microservices` `FastAPI` `Node.js` `React` `PostgreSQL` `MySQL` `MongoDB` `Redis` `Amazon S3`
 
 ### Cloud & DevOps
 
-`AWS` `Azure` `GCP` `Docker` `Kubernetes` `Apache Kafka` `Git` `GitHub Actions` `Jenkins` `Terraform` `CI/CD` `Grafana` `Prometheus`
+`AWS (EC2, S3, EKS, Lambda, CloudWatch)` `Azure` `GCP` `Docker` `Kubernetes` `Apache Kafka` `Git` `Jenkins` `Terraform` `CI/CD` `Grafana` `Prometheus`
 
 ### Software Engineering
 
-`Data Structures` `Algorithms` `OOP` `Distributed Systems` `Database Systems` `Enterprise Applications` `ERP` `Debugging` `Code Review` `Unit Testing` `Integration Testing` `TDD` `SDLC` `Agile` `Scrum`
+`Distributed Systems` `TDD` `Automated Integration Testing`
 
 ---
 
@@ -62,30 +60,29 @@ Software engineer with experience building AI-powered underwriting systems, ente
 
 **June 2025 - March 2026**
 
-* Reduced manual geospatial review effort by **75%** with a Python underwriting intelligence platform integrating ESRI REST APIs, LangChain, and LLM services.
-* Reduced external geocoding API usage by **35%** through a Redis cache-first architecture.
-* Reduced underwriting policy lookup from **15 minutes to 30 seconds per case** with a grounded RAG pipeline.
-* Reduced LLM inference costs by **28%** by routing 70% of routine requests to Phi-3 Mini.
-* Reduced exception resolution from **8 minutes to 3 minutes per case** with REST APIs and React/TypeScript workflows.
-* Maintained **99.9% workflow availability** on Kubernetes with fallbacks, testing, CI/CD, and human-in-the-loop safeguards.
+* Reduced LLM inference costs by **28%** with a Python/FastAPI semantic routing service that directed 70% of routine underwriting requests to lightweight models, reserving larger models for complex risk evaluations.
+* Maintained **99.9% underwriting workflow availability** by hosting fault-tolerant backend services on Amazon EC2, using AWS Lambda for event-driven tasks, and implementing CloudWatch monitoring, automated retries, circuit breakers, and cache fallbacks.
+* Reduced manual property-risk review effort by **75%** by integrating Esri REST APIs with AWS Lambda workflows to automate environmental-hazard evaluations and return structured risk results to underwriting services.
+* Accelerated underwriting guideline retrieval from **15 minutes to 30 seconds per application** with a Python-based RAG pipeline using Amazon S3 document ingestion, vector search, and source-grounded REST API responses.
+* Expedited underwriting referral resolution from **8 to 3 minutes per case** with REST APIs and a React/TypeScript workbench using Spec-Driven Development, documented API contracts, and acceptance criteria; authored internal technical wikis and troubleshooting guides.
 
 ### Hitachi Vantara - Software Engineer
 
 **August 2022 - August 2024**
 
-* Scaled Lumada Data Catalog to expose **1M+ enterprise metadata records** through Java and Spring Boot APIs.
-* Achieved **99.9% service availability** with fault-tolerant Spring Integration and JPA/Hibernate workflows.
-* Reduced metadata synchronization time by **45%** with Spring Batch and Apache Kafka.
-* Reduced metadata retrieval latency by **40%** with Spring WebFlux and React.js.
-* Reduced regression-testing cycles by **60%** through AWS, Docker, Kubernetes, Jenkins, and CI/CD automation.
+* Expanded metadata indexing to **1M+ enterprise assets** by developing scalable Java/Spring Boot REST APIs for Lumada Data Catalog, integrating automated metadata harvesting and schema discovery across databases and data lakes.
+* Improved cross-environment metadata synchronization speed by **45%** by publishing metadata-change events through Apache Kafka, processing batch synchronization with Spring Batch, and using Amazon S3 for intermediate data storage.
+* Protected **99.9% ingestion-pipeline availability** by operating Java microservices on Amazon EC2, implementing retry queues and fault-tolerant event processing, and participating in on-call rotations to troubleshoot production incidents.
+* Achieved **40% lower metadata search latency** by migrating blocking REST endpoints to non-blocking Spring WebFlux microservices and developing React dashboards for real-time asset-hierarchy visualization.
+* Delivered **60% faster regression-testing cycles** by automating Jenkins CI/CD pipelines for Docker-containerized microservices on Amazon EKS, integrating CloudWatch monitoring, and authoring internal deployment wikis and incident-response runbooks.
 
 ### Hitachi Vantara - Software Engineer Co-Op
 
 **January 2022 - August 2022**
 
-* Improved Pentaho query-processing efficiency by **15%** through Java and SQL backend development.
-* Delivered **8+ technical demonstrations** to stakeholders during Agile sprints.
-* Reduced environment setup and regression-testing cycles by **50%** with Docker and Python integration tests.
+* Increased Pentaho Data Integration ETL execution efficiency by **15%** by optimizing Java and SQL transformation steps and repository query plans.
+* Enabled **50% faster developer-environment provisioning and integration-test cycles** with Docker test fixtures and automated Python regression suites.
+* Presented **8+ technical demonstrations** across Agile sprints to product managers and enterprise stakeholders.
 
 ---
 
