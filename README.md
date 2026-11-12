@@ -2,7 +2,7 @@
 
 # Sunanda Tata
 
-### Software Engineer | AI/ML Engineering | Distributed Systems | Full-Stack Development|
+### Software Engineer | AI/ML Engineering | Distributed Systems | Full-Stack Development
 
 Building scalable backend services, distributed systems, and AI-enabled platforms.
 
@@ -12,6 +12,19 @@ Building scalable backend services, distributed systems, and AI-enabled platform
 [![GitHub](https://img.shields.io/badge/GitHub-sunandatata-181717?style=flat&logo=github&logoColor=white)](https://github.com/sunandatata)
 
 </div>
+
+## Portfolio Website
+
+The portfolio is organized for a recruiter-first walkthrough:
+
+1. **Home** — a short introduction and invitation to connect.
+2. **Hire Me** — role focus, measurable engineering impact, and technologies.
+3. **Work Experience** — production work at Pacific Life and Hitachi Vantara.
+4. **Projects** — selected AI, retrieval, and full-stack systems.
+5. **A little about me** — engineering capabilities, open-source work, and education.
+6. **Contact** — direct ways to get in touch.
+
+The site uses a restrained dark layout with a persistent sidebar on desktop and a compact menu on mobile.
 
 ---
 

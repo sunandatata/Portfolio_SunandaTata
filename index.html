@@ -1453,18 +1453,56 @@
       .metric-num { font-size: 2.5rem; }
       .metric-caption { font-size: 0.72rem; line-height: 1.35; }
     }
+    /* Calm reference layout: plain dark canvas, clear sections, no ambient lights. */
+    :root { --bg: #0b0b0c; --bg-secondary: #0b0b0c; --surface-card: #17181a; --surface-glass: #17181a; }
+    body { background: #0b0b0c; }
+    .spatial-backdrop, .spatial-scrim, .particles-canvas { display: none !important; }
+    .hero-shell::before, .pulse-dot::before { display: none !important; }
+    .schematic-nodes::after, .apple-card::before, .bento-card::before, .project-card::before { display: none !important; }
+    .cta-canvas { background: #17181a; box-shadow: none; }
+    .home-section { min-height: min(900px, calc(100vh - 2rem)); padding-top: 4.5rem; padding-bottom: 3.5rem; }
+    .home-section .hero-shell { max-width: 920px; }
+    .home-section .display-h1 { font-size: clamp(3.3rem, 6.3vw, 5.4rem); }
+    .home-section .hero-name { font-size: inherit; }
+    .home-section .hero-lede { max-width: 820px; font-size: clamp(1.15rem, 1.7vw, 1.4rem); color: #f1f1f1; }
+    .home-detail { max-width: 800px; color: var(--text-secondary); font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.7; }
+    .home-role-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .home-role-tags span, .technology-chips span { border: 1px solid var(--border-subtle); background: #17181a; border-radius: 9px; padding: 0.55rem 0.8rem; font-weight: 550; }
+    .home-connect-card { width: 100%; margin-top: 1rem; padding: clamp(1.4rem, 3vw, 2.2rem); border: 1px solid var(--border-subtle); border-radius: 22px; background: #17181a; }
+    .home-connect-card h2 { margin-bottom: 0.45rem; font-size: clamp(1.25rem, 2vw, 1.6rem); }
+    .home-connect-card p { max-width: 800px; margin-bottom: 1rem; color: var(--text-secondary); font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.65; }
+    .home-connect-card .btn { background: #f2f2ef; color: #101012; border: 0; }
+    .hire-section { padding: clamp(3.5rem, 7vh, 6rem) clamp(1.25rem, 5vw, 5rem); border-top: 1px solid var(--border-subtle); }
+    .hire-shell { max-width: 1120px; margin-inline: auto; }
+    .hire-title { margin: 1.5rem 0 1rem; color: #f5f5f5; font-size: clamp(3.2rem, 7vw, 5.7rem); line-height: 0.98; letter-spacing: -0.055em; }
+    .hire-title span { color: #c9c35a; }
+    .hire-lede { max-width: 800px; color: var(--text-secondary); font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.7; }
+    .hire-actions { display: flex; gap: 0.7rem; flex-wrap: wrap; margin: 1.4rem 0 2.5rem; }
+    .hire-proof-label, .hire-technologies h3 { margin-bottom: 0.65rem; color: var(--text-tertiary); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hire-section .hero-metrics-strip { max-width: none; margin: 0 0 2.8rem; }
+    .hire-section .metric-item { min-height: 170px; background: #17181a; }
+    .hire-section .metric-num { font-size: clamp(2.7rem, 4.5vw, 3.6rem); }
+    .hire-section .metric-caption { font-size: 0.95rem; }
+    .hire-technologies { border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; }
+    .technology-chips { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+    .technology-chips span { padding: 0.5rem 0.8rem; color: #e7e7e8; font-weight: 500; }
+    #experience, #projects, #about, #education, #contact { scroll-margin-top: 1.5rem; }
+    @media (max-width: 960px) { .home-section { min-height: 0; } .hire-section { padding: 3.5rem 1.5rem; } }
+    @media (max-width: 560px) {
+      .home-section { padding: 3rem 1.25rem; }
+      .home-section .display-h1, .home-section .hero-name { font-size: clamp(3rem, 13vw, 4.3rem); }
+      .home-connect-card { margin-top: 0.5rem; }
+      .hire-section { padding: 3rem 1.25rem; }
+      .hire-title { font-size: clamp(2.8rem, 12vw, 4rem); }
+      .hire-section .hero-metrics-strip { grid-template-columns: 1fr 1fr; }
+      .hire-section .metric-item { min-height: 135px; padding: 1rem; }
+    }
   </style>
 </head>
 <body>
 
   <!-- Accessible Skip Navigation -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- Clean & Minimalist Spatial Animation Backdrop -->
-  <div class="spatial-backdrop" aria-hidden="true">
-    <div class="spatial-scrim"></div>
-    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
-  </div>
 
   <!-- Persistent portfolio navigation -->
   <nav class="nav-dock-wrapper" aria-label="Primary Navigation">
@@ -1475,7 +1513,7 @@
       </a>
 
       <div class="sidebar-handle" aria-label="GitHub profile">
-        <span>@sunandatata</span>
+        <span><a href="https://github.com/sunandatata" target="_blank" rel="noopener noreferrer">@sunandatata</a></span>
         <span class="sidebar-status-dot" aria-hidden="true"></span>
       </div>
 
@@ -1484,12 +1522,11 @@
       <div class="dock-links">
         <div class="dock-indicator" id="dockIndicator" aria-hidden="true"></div>
         <a href="#hero" class="dock-link tactile-press" data-target="hero"><span class="sidebar-link-icon" aria-hidden="true">⌂</span>Home</a>
-        <a href="#contact" class="dock-link tactile-press" data-target="contact"><span class="sidebar-link-icon" aria-hidden="true">✉</span>Hire Me</a>
+        <a href="#hire-me" class="dock-link tactile-press" data-target="hire-me"><span class="sidebar-link-icon" aria-hidden="true">▣</span>Hire Me</a>
         <a href="#experience" class="dock-link tactile-press" data-target="experience"><span class="sidebar-link-icon" aria-hidden="true">▤</span>Work Experience</a>
         <a href="#projects" class="dock-link tactile-press" data-target="projects"><span class="sidebar-link-icon" aria-hidden="true">⌘</span>Projects</a>
-        <a href="#opensource" class="dock-link tactile-press" data-target="opensource"><span class="sidebar-link-icon" aria-hidden="true">↗</span>Open Source</a>
-        <a href="#capabilities" class="dock-link tactile-press" data-target="capabilities"><span class="sidebar-link-icon" aria-hidden="true">◇</span>Skills</a>
-        <a href="#education" class="dock-link tactile-press" data-target="education"><span class="sidebar-link-icon" aria-hidden="true">▱</span>Education</a>
+        <a href="#about" class="dock-link tactile-press" data-target="about"><span class="sidebar-link-icon" aria-hidden="true">◇</span>A little about me</a>
+        <a href="#contact" class="dock-link tactile-press" data-target="contact"><span class="sidebar-link-icon" aria-hidden="true">✉</span>Contact</a>
       </div>
 
       <div class="dock-actions">
@@ -1506,70 +1543,55 @@
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
-      <a href="#experience" class="mobile-menu-link" data-target="experience">Experience</a>
-      <a href="#capabilities" class="mobile-menu-link" data-target="capabilities">Capabilities</a>
-      <a href="#opensource" class="mobile-menu-link" data-target="opensource">Open Source</a>
+      <a href="#hero" class="mobile-menu-link" data-target="hero">Home</a>
+      <a href="#hire-me" class="mobile-menu-link" data-target="hire-me">Hire Me</a>
+      <a href="#experience" class="mobile-menu-link" data-target="experience">Work Experience</a>
       <a href="#projects" class="mobile-menu-link" data-target="projects">Projects</a>
-      <a href="#education" class="mobile-menu-link" data-target="education">Education</a>
+      <a href="#about" class="mobile-menu-link" data-target="about">A little about me</a>
       <a href="#contact" class="mobile-menu-link" data-target="contact">Contact</a>
     </div>
   </nav>
 
   <main id="main-content" tabindex="-1">
-    
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="hero" aria-labelledby="hero-title">
-        <div class="hero-shell">
-          
-          <div class="eyebrow-badge">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            <span>Available for Software Engineering &amp; AI Roles</span>
-          </div>
 
-          <h1 class="display-h1" id="hero-title">
-            <span class="hero-name">I build systems.</span>
-            <span class="hero-subhead"><span class="hero-subhead-accent">I ship reliable AI.</span></span>
-          </h1>
+    <!-- HOME: short introduction and invitation to connect -->
+    <section class="hero-section home-section" id="hero" aria-labelledby="hero-title">
+      <div class="hero-shell">
+        <div class="eyebrow-badge"><span class="pulse-dot" aria-hidden="true"></span><span>Software Engineer · AI / Backend Systems</span></div>
+        <h1 class="display-h1" id="hero-title"><span class="hero-name">Hi, I'm Sunanda.</span></h1>
+        <p class="hero-lede">I build dependable software, distributed systems, and AI-powered applications that solve real problems.</p>
+        <p class="home-detail">M.S. in Computer Science from California State University, Fullerton. 3+ years building production systems with Pacific Life and Hitachi Vantara.</p>
+        <div class="home-role-tags" aria-label="Areas of work"><span>Software Engineer</span><span>Backend Engineer</span><span>AI Engineer</span></div>
+        <article class="home-connect-card">
+          <h2>Open to new opportunities</h2>
+          <p>I'm actively interviewing for full-time software engineering and AI roles. If you're building something ambitious, I'd love to connect.</p>
+          <a href="#contact" class="btn btn-solid tactile-press">Start a conversation <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
 
-          <p class="hero-lede">
-            I build dependable backend services, distributed systems, and AI applications that solve real problems. M.S. in Computer Science from CSU Fullerton, with 3+ years of experience across Pacific Life and Hitachi Vantara.
-          </p>
-
-          <div class="hero-actions-row">
-            <a href="./Sunandatata_Software_Engineer.pdf" download class="btn btn-solid tactile-press">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>Download Resume</span>
-            </a>
-            <a href="#projects" class="btn btn-glass tactile-press">
-              <span>View Projects</span>
-            </a>
-            <button type="button" class="btn btn-glass tactile-press" id="copyEmailBtn" aria-label="Copy Email to Clipboard">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              <span>Copy Email</span>
-            </button>
-          </div>
-
-          <!-- Key Metrics Strip -->
-          <div class="hero-metrics-strip" aria-label="Core Engineering Impact Metrics">
-            <div class="metric-item">
-              <div class="metric-num">75<span class="accent">%</span></div>
-              <div class="metric-caption">Manual Review Reduction (Pacific Life)</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-num">30<span class="accent">s</span></div>
-              <div class="metric-caption">Guideline Retrieval via Grounded RAG (from 15m)</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-num">1<span class="accent">M+</span></div>
-              <div class="metric-caption">Enterprise Metadata Assets Indexed</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-num">99.9<span class="accent">%</span></div>
-              <div class="metric-caption">Workflow &amp; Pipeline Availability</div>
-            </div>
-          </div>
-
+    <!-- HIRE ME: candidate introduction, measurable impact, and technologies -->
+    <section class="hire-section" id="hire-me" aria-labelledby="hire-title">
+      <div class="container hire-shell">
+        <div class="eyebrow-badge"><span class="pulse-dot" aria-hidden="true"></span><span>Actively interviewing · Available for full-time roles</span></div>
+        <h2 class="hire-title" id="hire-title">I build things.<br><span>I ship reliable systems.</span></h2>
+        <p class="hire-lede">I've built AI workflows that cut manual review by 75%, retrieval systems that return grounded answers in 30 seconds, and enterprise platforms indexing more than one million assets.</p>
+        <div class="hire-actions">
+          <a href="#contact" class="btn btn-solid tactile-press">Let's talk <span aria-hidden="true">→</span></a>
+          <a href="./Sunandatata_Software_Engineer.pdf" download class="btn btn-glass tactile-press">Download resume</a>
         </div>
+        <div class="hire-proof-label">Real numbers. Real work.</div>
+        <div class="hero-metrics-strip" aria-label="Engineering impact">
+          <article class="metric-item"><div class="metric-num">75<span class="accent">%</span></div><div class="metric-caption">less manual property-risk review · Pacific Life</div></article>
+          <article class="metric-item"><div class="metric-num">30<span class="accent">s</span></div><div class="metric-caption">grounded guideline retrieval, down from 15 minutes</div></article>
+          <article class="metric-item"><div class="metric-num">1<span class="accent">M+</span></div><div class="metric-caption">enterprise metadata assets indexed</div></article>
+          <article class="metric-item"><div class="metric-num">99.9<span class="accent">%</span></div><div class="metric-caption">availability across production workflows</div></article>
+        </div>
+        <div class="hire-technologies">
+          <h3>Technologies</h3>
+          <div class="technology-chips"><span>Python</span><span>Java</span><span>FastAPI</span><span>Spring Boot</span><span>React</span><span>TypeScript</span><span>AWS</span><span>Apache Kafka</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>LangChain</span><span>RAG / GenAI</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span></div>
+        </div>
+      </div>
     </section>
 
     <!-- EXPERIENCE SECTION -->
@@ -1578,14 +1600,14 @@
         <div class="section-header">
           <p class="section-eyebrow">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            <span>01 / Track Record</span>
+            <span>01 / Work Experience</span>
           </p>
           <h2 class="section-title" id="experience-title">Production engineering with verifiable system impact.</h2>
           <p class="section-subtitle">Architectural depth across intelligent underwriting, enterprise metadata catalogs, and distributed streaming.</p>
         </div>
 
         <div class="timeline-stack">
-          
+
           <!-- Pacific Life -->
           <article class="apple-card">
             <div class="role-row">
@@ -1666,16 +1688,179 @@
       </div>
     </section>
 
+    <!-- FEATURED PROJECTS -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            <span>02 / Projects</span>
+          </p>
+          <h2 class="section-title" id="projects-title">Systems designed for retrieval, concurrency, and defense.</h2>
+          <p class="section-subtitle">Hybrid enterprise search, real-time distributed systems, and adversarial ML pipelines.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- ChronoMind -->
+          <article class="project-card">
+            <div class="project-schematic">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-blue);">HYBRID ENTERPRISE RETRIEVAL</span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">100K+ DOCUMENTS</span>
+              </div>
+              <div class="schematic-nodes">
+                <div class="schematic-node"><span>Dense Vectors</span></div>
+                <div class="schematic-node" style="border-color: var(--apple-blue); color: var(--apple-blue);"><span>Hybrid Fusion</span></div>
+                <div class="schematic-node"><span>Knowledge Graph</span></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-tertiary);">
+                <span>Qdrant + Neo4j</span><span>Sub-120ms Retrieval</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="tag-chip">18% Recall@10 Gain</span><span class="tag-chip">0.14 MRR Gain</span><span class="tag-chip">Sub-120ms</span>
+              </div>
+              <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">ChronoMind &mdash; Enterprise RAG &amp; Vector Search Engine</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">Hybrid retrieval combines dense vector search, sparse BM25, knowledge-graph traversal, and cross-encoder reranking with Qdrant, Neo4j, and LangChain. Redis caching and parallel candidate generation keep retrieval under 120ms across 100K+ documents.</p>
+              <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
+                <span class="tag-chip">Qdrant</span><span class="tag-chip">Neo4j</span><span class="tag-chip">LangChain</span><span class="tag-chip">BM25</span><span class="tag-chip">Redis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ride Matching Platform -->
+          <article class="project-card">
+            <!-- Architectural Blueprint Header (Razor-sharp SVG schematic, zero blurry images) -->
+            <div class="project-schematic">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-blue);">TOPOLOGY: BI-DIRECTIONAL DISPATCH</span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">7-STAGE LIVE SYNC</span>
+              </div>
+              <div class="schematic-nodes">
+                <div class="schematic-node">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <span>Rider App</span>
+                </div>
+                <div class="schematic-node" style="border-color: var(--apple-blue); color: var(--apple-blue);">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/></svg>
+                  <span>WebSocket Gateway</span>
+                </div>
+                <div class="schematic-node">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
+                  <span>Driver App</span>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-tertiary);">
+                <span>3 React/TypeScript Role Portals</span>
+                <span>Node.js / Express Backend</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">3 Role Applications</span>
+                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-mint); background: var(--apple-mint-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">7-Stage Lifecycle</span>
+                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-cyan); background: rgba(100, 210, 255, 0.1); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">11+ Automated Tests</span>
+              </div>
+
+              <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">Ride Matching Platform</h3>
+
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">
+                Resilient real-time ride dispatch built with <strong>Node.js, Express, TypeScript, and React</strong>, separating seven backend domains to isolate location tracking from dispatch. Atomic state transitions with distributed locks prevent multiple drivers accepting one ride; WebSocket heartbeat reconnects, state hydration, and idempotency keys keep clients and booking/payment retries consistent. Verified under network partitions and high concurrency with 11+ Docker integration test suites.
+              </p>
+
+              <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
+                <span class="tag-chip">React</span>
+                <span class="tag-chip">TypeScript</span>
+                <span class="tag-chip">Node.js</span>
+                <span class="tag-chip">Express</span>
+                <span class="tag-chip">WebSockets</span>
+                <span class="tag-chip">Docker</span>
+              </div>
+
+              <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                <a href="https://github.com/sunandatata/Ride-Matching-Platform" target="_blank" rel="noopener noreferrer" class="btn btn-glass tactile-press" aria-label="View Ride Matching Platform on GitHub">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AI2-SED Defense Framework -->
+          <article class="project-card">
+            <div class="project-schematic">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-cyan);">DEFENSE PIPELINE: ADVERSARIAL STRESS</span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">REPEATABLE EVALUATION</span>
+              </div>
+              <div class="schematic-nodes">
+                <div class="schematic-node">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>URL Sample</span>
+                </div>
+                <div class="schematic-node" style="border-color: var(--apple-cyan); color: var(--apple-cyan);">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>RoBERTa Guard</span>
+                </div>
+                <div class="schematic-node">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                  <span>T5 Adversary</span>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-tertiary);">
+                <span>Adaptive Threat Generation</span>
+                <span>FastAPI + Streamlit</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">Phishing Detection</span>
+                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-cyan); background: rgba(100, 210, 255, 0.1); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">RoBERTa + T5</span>
+                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-mint); background: var(--apple-mint-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">FastAPI Engine</span>
+              </div>
+
+              <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">AI2-SED Defense Framework</h3>
+
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">
+                Phishing-defense pipeline combining a <strong>fine-tuned RoBERTa classifier</strong> and URL heuristics with a <strong>T5 generative attack engine</strong> to simulate evasion. Iterative red-team training and confidence-calibrated ensembling raised robustness by 22% against semantic and lexical perturbations.
+              </p>
+
+              <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
+                <span class="tag-chip">Python</span>
+                <span class="tag-chip">RoBERTa</span>
+                <span class="tag-chip">T5</span>
+                <span class="tag-chip">FastAPI</span>
+                <span class="tag-chip">Streamlit</span>
+                <span class="tag-chip">Adversarial ML</span>
+              </div>
+
+              <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                <a href="https://github.com/sunandatata/AI--SED" target="_blank" rel="noopener noreferrer" class="btn btn-glass tactile-press" aria-label="View AI2-SED on GitHub">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <!-- CAPABILITIES & SKILLS MATRIX -->
-    <section id="capabilities" aria-labelledby="capabilities-title">
+    <section id="about" aria-labelledby="capabilities-title">
       <div class="container">
         <div class="section-header">
           <p class="section-eyebrow">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            <span>02 / Technical Depth</span>
+            <span>03 / About</span>
           </p>
-          <h2 class="section-title" id="capabilities-title">Disciplined engineering shaped for reliability and scale.</h2>
-          <p class="section-subtitle">Filter capabilities by engineering domain or view the complete cross-functional stack.</p>
+          <h2 class="section-title" id="capabilities-title">A little about me</h2>
+          <p class="section-subtitle">How I work, the tools I use, and the open-source communities I contribute to.</p>
         </div>
 
         <!-- Apple Segmented Filter -->
@@ -1691,7 +1876,7 @@
         </div>
 
         <div class="capabilities-bento">
-          
+
           <!-- AI/ML Bento Card (Span 7) -->
           <article class="apple-card bento-card capability-card" data-domain="ai">
             <div>
@@ -1872,7 +2057,7 @@
         <div class="section-header">
           <p class="section-eyebrow">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
-            <span>03 / Open Source</span>
+            <span>04 / Open Source</span>
           </p>
           <h2 class="section-title" id="opensource-title">Hardening retrieval infrastructure in RAGFlow.</h2>
           <p class="section-subtitle">Direct open-source code contributions to Infiniflow's RAGFlow deep document retrieval engine.</p>
@@ -1917,176 +2102,13 @@
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
-    <section id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-            <span>04 / Systems in Action</span>
-          </p>
-          <h2 class="section-title" id="projects-title">Systems designed for retrieval, concurrency, and defense.</h2>
-          <p class="section-subtitle">Hybrid enterprise search, real-time distributed systems, and adversarial ML pipelines.</p>
-        </div>
-
-        <div class="projects-grid">
-          
-          <!-- ChronoMind -->
-          <article class="project-card">
-            <div class="project-schematic">
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-blue);">HYBRID ENTERPRISE RETRIEVAL</span>
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">100K+ DOCUMENTS</span>
-              </div>
-              <div class="schematic-nodes">
-                <div class="schematic-node"><span>Dense Vectors</span></div>
-                <div class="schematic-node" style="border-color: var(--apple-blue); color: var(--apple-blue);"><span>Hybrid Fusion</span></div>
-                <div class="schematic-node"><span>Knowledge Graph</span></div>
-              </div>
-              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-tertiary);">
-                <span>Qdrant + Neo4j</span><span>Sub-120ms Retrieval</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <span class="tag-chip">18% Recall@10 Gain</span><span class="tag-chip">0.14 MRR Gain</span><span class="tag-chip">Sub-120ms</span>
-              </div>
-              <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">ChronoMind &mdash; Enterprise RAG &amp; Vector Search Engine</h3>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">Hybrid retrieval combines dense vector search, sparse BM25, knowledge-graph traversal, and cross-encoder reranking with Qdrant, Neo4j, and LangChain. Redis caching and parallel candidate generation keep retrieval under 120ms across 100K+ documents.</p>
-              <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
-                <span class="tag-chip">Qdrant</span><span class="tag-chip">Neo4j</span><span class="tag-chip">LangChain</span><span class="tag-chip">BM25</span><span class="tag-chip">Redis</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Ride Matching Platform -->
-          <article class="project-card">
-            <!-- Architectural Blueprint Header (Razor-sharp SVG schematic, zero blurry images) -->
-            <div class="project-schematic">
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-blue);">TOPOLOGY: BI-DIRECTIONAL DISPATCH</span>
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">7-STAGE LIVE SYNC</span>
-              </div>
-              <div class="schematic-nodes">
-                <div class="schematic-node">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                  <span>Rider App</span>
-                </div>
-                <div class="schematic-node" style="border-color: var(--apple-blue); color: var(--apple-blue);">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/></svg>
-                  <span>WebSocket Gateway</span>
-                </div>
-                <div class="schematic-node">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
-                  <span>Driver App</span>
-                </div>
-              </div>
-              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-tertiary);">
-                <span>3 React/TypeScript Role Portals</span>
-                <span>Node.js / Express Backend</span>
-              </div>
-            </div>
-
-            <div class="project-info">
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">3 Role Applications</span>
-                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-mint); background: var(--apple-mint-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">7-Stage Lifecycle</span>
-                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-cyan); background: rgba(100, 210, 255, 0.1); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">11+ Automated Tests</span>
-              </div>
-
-              <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">Ride Matching Platform</h3>
-              
-              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">
-                Resilient real-time ride dispatch built with <strong>Node.js, Express, TypeScript, and React</strong>, separating seven backend domains to isolate location tracking from dispatch. Atomic state transitions with distributed locks prevent multiple drivers accepting one ride; WebSocket heartbeat reconnects, state hydration, and idempotency keys keep clients and booking/payment retries consistent. Verified under network partitions and high concurrency with 11+ Docker integration test suites.
-              </p>
-
-              <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
-                <span class="tag-chip">React</span>
-                <span class="tag-chip">TypeScript</span>
-                <span class="tag-chip">Node.js</span>
-                <span class="tag-chip">Express</span>
-                <span class="tag-chip">WebSockets</span>
-                <span class="tag-chip">Docker</span>
-              </div>
-
-              <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
-                <a href="https://github.com/sunandatata/Ride-Matching-Platform" target="_blank" rel="noopener noreferrer" class="btn btn-glass tactile-press" aria-label="View Ride Matching Platform on GitHub">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                  <span>View on GitHub</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- AI2-SED Defense Framework -->
-          <article class="project-card">
-            <div class="project-schematic">
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-cyan);">DEFENSE PIPELINE: ADVERSARIAL STRESS</span>
-                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--apple-mint);">REPEATABLE EVALUATION</span>
-              </div>
-              <div class="schematic-nodes">
-                <div class="schematic-node">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span>URL Sample</span>
-                </div>
-                <div class="schematic-node" style="border-color: var(--apple-cyan); color: var(--apple-cyan);">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span>RoBERTa Guard</span>
-                </div>
-                <div class="schematic-node">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                  <span>T5 Adversary</span>
-                </div>
-              </div>
-              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-tertiary);">
-                <span>Adaptive Threat Generation</span>
-                <span>FastAPI + Streamlit</span>
-              </div>
-            </div>
-
-            <div class="project-info">
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">Phishing Detection</span>
-                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-cyan); background: rgba(100, 210, 255, 0.1); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">RoBERTa + T5</span>
-                <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--apple-mint); background: var(--apple-mint-soft); padding: 0.2rem 0.55rem; border-radius: var(--radius-sm);">FastAPI Engine</span>
-              </div>
-
-              <h3 style="font-size: 1.28rem; font-weight: 600; color: #ffffff;">AI2-SED Defense Framework</h3>
-              
-              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55;">
-                Phishing-defense pipeline combining a <strong>fine-tuned RoBERTa classifier</strong> and URL heuristics with a <strong>T5 generative attack engine</strong> to simulate evasion. Iterative red-team training and confidence-calibrated ensembling raised robustness by 22% against semantic and lexical perturbations.
-              </p>
-
-              <div class="tags-row" style="margin-top: 0; padding-top: 0; border: none;">
-                <span class="tag-chip">Python</span>
-                <span class="tag-chip">RoBERTa</span>
-                <span class="tag-chip">T5</span>
-                <span class="tag-chip">FastAPI</span>
-                <span class="tag-chip">Streamlit</span>
-                <span class="tag-chip">Adversarial ML</span>
-              </div>
-
-              <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
-                <a href="https://github.com/sunandatata/AI--SED" target="_blank" rel="noopener noreferrer" class="btn btn-glass tactile-press" aria-label="View AI2-SED on GitHub">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                  <span>View on GitHub</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
     <!-- EDUCATION -->
     <section id="education" aria-labelledby="education-title">
       <div class="container">
         <div class="section-header">
           <p class="section-eyebrow">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            <span>05 / Academic Credentials</span>
+            <span>05 / Education</span>
           </p>
           <h2 class="section-title" id="education-title">Master of Science in Computer Science</h2>
         </div>
@@ -2147,7 +2169,7 @@
   <footer class="footer-shell">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
       <div>
-        <span>&copy; 2026 Sunanda Tata. Engineered with physical restraint &amp; Apple craft.</span>
+        <span>&copy; 2026 Sunanda Tata.</span>
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/tata-sunanda/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
