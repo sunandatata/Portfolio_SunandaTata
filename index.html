@@ -1397,6 +1397,12 @@
     .dock-links { display: flex; flex-direction: column; align-items: stretch; gap: 0.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; }
     .dock-indicator { display: none; }
     .dock-link { min-height: 50px; padding: 0.65rem 0.85rem; border-radius: 12px; color: var(--text-secondary); font-size: 0.96rem; font-weight: 500; gap: 0.8rem; }
+    .dock-logo { align-self: flex-start; }
+    .dock-link { width: 100%; justify-content: flex-start; text-align: left; }
+    .dock-links { gap: 0.1rem; }
+    .nav-dock { gap: 1rem; }
+    .sidebar-role { min-height: 50px; }
+    .sidebar-handle { align-self: flex-start; }
     .dock-link:hover, .dock-link.active { color: #fff; background: rgba(255,255,255,0.075); }
     .sidebar-link-icon { width: 22px; color: var(--text-tertiary); font-size: 1.12rem; text-align: center; }
     .dock-link.active .sidebar-link-icon { color: #fff; }
@@ -1410,7 +1416,7 @@
     .hero-name { display: block; }
     .hero-name { font-size: clamp(3.5rem, 6vw, 5.8rem); }
     .hero-subhead { display: block; font-size: inherit; margin-top: 0.08em; }
-    .hero-subhead-accent { display: inline; background: #e7df66; color: #171713; -webkit-text-fill-color: #171713; padding: 0 0.12em 0.04em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subhead-accent { display: inline; background: none; color: var(--apple-blue); -webkit-text-fill-color: var(--apple-blue); padding: 0; }
     .hero-lede { max-width: 780px; margin: 0; font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.7; color: var(--text-secondary); }
     .hero-actions-row { justify-content: flex-start; }
     .hero-metrics-strip { width: 100%; max-width: 980px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; margin-top: 0.7rem; }
@@ -1454,8 +1460,8 @@
       .metric-caption { font-size: 0.72rem; line-height: 1.35; }
     }
     /* Calm reference layout: plain dark canvas, clear sections, no ambient lights. */
-    :root { --bg: #0b0b0c; --bg-secondary: #0b0b0c; --surface-card: #17181a; --surface-glass: #17181a; }
-    body { background: #0b0b0c; }
+    :root { --bg: #000000; --bg-secondary: #07080a; --surface-card: #11151c; --surface-glass: #10141b; }
+    body { background: #000000; }
     .spatial-backdrop, .spatial-scrim, .particles-canvas { display: none !important; }
     .hero-shell::before, .pulse-dot::before { display: none !important; }
     .schematic-nodes::after, .apple-card::before, .bento-card::before, .project-card::before { display: none !important; }
@@ -1464,28 +1470,35 @@
     .home-section .hero-shell { max-width: 920px; }
     .home-section .display-h1 { font-size: clamp(3.3rem, 6.3vw, 5.4rem); }
     .home-section .hero-name { font-size: inherit; }
+    .home-section .home-subhead { display: block; font-size: clamp(1.6rem, 3vw, 2.35rem); line-height: 1.2; }
+    .home-section .hero-subhead-accent { background: none; color: var(--apple-blue); -webkit-text-fill-color: var(--apple-blue); padding: 0; }
     .home-section .hero-lede { max-width: 820px; font-size: clamp(1.15rem, 1.7vw, 1.4rem); color: #f1f1f1; }
     .home-detail { max-width: 800px; color: var(--text-secondary); font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.7; }
     .home-role-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-    .home-role-tags span, .technology-chips span { border: 1px solid var(--border-subtle); background: #17181a; border-radius: 9px; padding: 0.55rem 0.8rem; font-weight: 550; }
-    .home-connect-card { width: 100%; margin-top: 1rem; padding: clamp(1.4rem, 3vw, 2.2rem); border: 1px solid var(--border-subtle); border-radius: 22px; background: #17181a; }
+    .home-role-tags span, .technology-chips span { border: 1px solid var(--border-subtle); background: #10141b; border-radius: 9px; padding: 0.55rem 0.8rem; font-weight: 550; }
+    .home-connect-card { width: 100%; margin-top: 1rem; padding: clamp(1.4rem, 3vw, 2.2rem); border: 1px solid var(--border-subtle); border-radius: 22px; background: #11151c; }
     .home-connect-card h2 { margin-bottom: 0.45rem; font-size: clamp(1.25rem, 2vw, 1.6rem); }
     .home-connect-card p { max-width: 800px; margin-bottom: 1rem; color: var(--text-secondary); font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.65; }
-    .home-connect-card .btn { background: #f2f2ef; color: #101012; border: 0; }
+    .home-connect-card .btn { background: var(--apple-blue); color: #fff; border: 0; }
     .hire-section { padding: clamp(3.5rem, 7vh, 6rem) clamp(1.25rem, 5vw, 5rem); border-top: 1px solid var(--border-subtle); }
     .hire-shell { max-width: 1120px; margin-inline: auto; }
     .hire-title { margin: 1.5rem 0 1rem; color: #f5f5f5; font-size: clamp(3.2rem, 7vw, 5.7rem); line-height: 0.98; letter-spacing: -0.055em; }
-    .hire-title span { color: #c9c35a; }
+    .hire-title span { color: var(--apple-blue); }
     .hire-lede { max-width: 800px; color: var(--text-secondary); font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.7; }
     .hire-actions { display: flex; gap: 0.7rem; flex-wrap: wrap; margin: 1.4rem 0 2.5rem; }
     .hire-proof-label, .hire-technologies h3 { margin-bottom: 0.65rem; color: var(--text-tertiary); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
     .hire-section .hero-metrics-strip { max-width: none; margin: 0 0 2.8rem; }
-    .hire-section .metric-item { min-height: 170px; background: #17181a; }
+    .hire-section .metric-item { min-height: 170px; background: #11151c; }
     .hire-section .metric-num { font-size: clamp(2.7rem, 4.5vw, 3.6rem); }
     .hire-section .metric-caption { font-size: 0.95rem; }
     .hire-technologies { border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; }
     .technology-chips { display: flex; flex-wrap: wrap; gap: 0.55rem; }
     .technology-chips span { padding: 0.5rem 0.8rem; color: #e7e7e8; font-weight: 500; }
+    .hire-actions .btn-solid { background: var(--apple-blue); color: #fff; border: 0; }
+    .opensource-section { padding-block: 4rem; }
+    .open-source-feature { border: 1px solid rgba(41, 151, 255, 0.45); border-top: 3px solid var(--apple-blue); background: #10141b; }
+    .opensource-section .section-title { max-width: 850px; }
+    .opensource-section .section-subtitle { max-width: 760px; }
     #experience, #projects, #about, #education, #contact { scroll-margin-top: 1.5rem; }
     @media (max-width: 960px) { .home-section { min-height: 0; } .hire-section { padding: 3.5rem 1.5rem; } }
     @media (max-width: 560px) {
@@ -1525,6 +1538,7 @@
         <a href="#hire-me" class="dock-link tactile-press" data-target="hire-me"><span class="sidebar-link-icon" aria-hidden="true">▣</span>Hire Me</a>
         <a href="#experience" class="dock-link tactile-press" data-target="experience"><span class="sidebar-link-icon" aria-hidden="true">▤</span>Work Experience</a>
         <a href="#projects" class="dock-link tactile-press" data-target="projects"><span class="sidebar-link-icon" aria-hidden="true">⌘</span>Projects</a>
+        <a href="#opensource" class="dock-link tactile-press" data-target="opensource"><span class="sidebar-link-icon" aria-hidden="true">↗</span>Open Source</a>
         <a href="#about" class="dock-link tactile-press" data-target="about"><span class="sidebar-link-icon" aria-hidden="true">◇</span>A little about me</a>
         <a href="#contact" class="dock-link tactile-press" data-target="contact"><span class="sidebar-link-icon" aria-hidden="true">✉</span>Contact</a>
       </div>
@@ -1547,6 +1561,7 @@
       <a href="#hire-me" class="mobile-menu-link" data-target="hire-me">Hire Me</a>
       <a href="#experience" class="mobile-menu-link" data-target="experience">Work Experience</a>
       <a href="#projects" class="mobile-menu-link" data-target="projects">Projects</a>
+      <a href="#opensource" class="mobile-menu-link" data-target="opensource">Open Source</a>
       <a href="#about" class="mobile-menu-link" data-target="about">A little about me</a>
       <a href="#contact" class="mobile-menu-link" data-target="contact">Contact</a>
     </div>
@@ -1558,9 +1573,9 @@
     <section class="hero-section home-section" id="hero" aria-labelledby="hero-title">
       <div class="hero-shell">
         <div class="eyebrow-badge"><span class="pulse-dot" aria-hidden="true"></span><span>Software Engineer · AI / Backend Systems</span></div>
-        <h1 class="display-h1" id="hero-title"><span class="hero-name">Hi, I'm Sunanda.</span></h1>
-        <p class="hero-lede">I build dependable software, distributed systems, and AI-powered applications that solve real problems.</p>
-        <p class="home-detail">M.S. in Computer Science from California State University, Fullerton. 3+ years building production systems with Pacific Life and Hitachi Vantara.</p>
+        <h1 class="display-h1" id="hero-title"><span class="hero-name">Hi, I'm Sunanda Tata.</span><span class="hero-subhead home-subhead"><span class="hero-subhead-accent">Recently graduated</span></span></h1>
+        <p class="hero-lede">I like making complex things feel simple: dependable services, fast retrieval, and AI that earns its place in real workflows.</p>
+        <p class="home-detail">I recently earned my M.S. in Computer Science from California State University, Fullerton (May 2026), after 3+ years building production systems at Pacific Life and Hitachi Vantara.</p>
         <div class="home-role-tags" aria-label="Areas of work"><span>Software Engineer</span><span>Backend Engineer</span><span>AI Engineer</span></div>
         <article class="home-connect-card">
           <h2>Open to new opportunities</h2>
@@ -1574,7 +1589,7 @@
     <section class="hire-section" id="hire-me" aria-labelledby="hire-title">
       <div class="container hire-shell">
         <div class="eyebrow-badge"><span class="pulse-dot" aria-hidden="true"></span><span>Actively interviewing · Available for full-time roles</span></div>
-        <h2 class="hire-title" id="hire-title">I build things.<br><span>I ship reliable systems.</span></h2>
+        <h2 class="hire-title" id="hire-title">I build things.<br><span>I ship systems people can count on.</span></h2>
         <p class="hire-lede">I've built AI workflows that cut manual review by 75%, retrieval systems that return grounded answers in 30 seconds, and enterprise platforms indexing more than one million assets.</p>
         <div class="hire-actions">
           <a href="#contact" class="btn btn-solid tactile-press">Let's talk <span aria-hidden="true">→</span></a>
@@ -1851,16 +1866,67 @@
       </div>
     </section>
 
+    <!-- OPEN SOURCE CONTRIBUTIONS -->
+    <section id="opensource" class="opensource-section" aria-labelledby="opensource-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+            <span>03 / Open Source</span>
+          </p>
+          <h2 class="section-title" id="opensource-title">Making retrieval more predictable in RAGFlow.</h2>
+          <p class="section-subtitle">A featured open-source contribution: tracking down edge cases, making behavior deterministic, and protecting fixes with regression coverage.</p>
+        </div>
+
+        <article class="apple-card open-source-feature">
+          <div class="role-row">
+            <div class="role-meta">
+              <div class="company-monogram" style="background: linear-gradient(135deg, #24292f 0%, #0d1117 100%); border-color: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);" title="GitHub / RAGFlow" aria-label="GitHub logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+              </div>
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                  <h3 class="role-title">RAGFlow</h3>
+                  <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.65rem; border-radius: var(--radius-full); border: 1px solid rgba(41, 151, 255, 0.25);">Open Source Contributor</span>
+                </div>
+                <div class="role-company" style="color: var(--text-secondary);">infiniflow/ragflow &bull; Deep Document Retrieval Engine</div>
+              </div>
+            </div>
+            <a href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener noreferrer" class="btn btn-glass tactile-press" aria-label="View RAGFlow Repository on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <span>View on GitHub</span>
+            </a>
+          </div>
+
+          <ul class="clean-bullets">
+            <li>Identified and resolved <strong>parameter-precedence handling bugs</strong> across <strong>20+ regression test scenarios</strong>, guaranteeing that client top-k parameters, similarity thresholds, and rerank configurations take deterministic priority.</li>
+            <li>Restored correct <strong>top-k ranking ordering</strong> across <strong>25+ reranking test cases</strong> by enforcing sorting of reranked semantic chunks prior to pagination limits.</li>
+            <li>Extended <strong>AI Agent conversation memory retrieval across 3 languages</strong>, verifying multilingual stability through <strong>15+ automated integration tests</strong>.</li>
+          </ul>
+
+          <div class="tags-row">
+            <span class="tag-chip">Retrieval Correctness</span>
+            <span class="tag-chip">Multilingual Memory</span>
+            <span class="tag-chip">Reranking Algorithms</span>
+            <span class="tag-chip">Vector Search</span>
+            <span class="tag-chip">Regression Testing</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- CAPABILITIES & SKILLS MATRIX -->
     <section id="about" aria-labelledby="capabilities-title">
       <div class="container">
         <div class="section-header">
           <p class="section-eyebrow">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            <span>03 / About</span>
+            <span>04 / About</span>
           </p>
           <h2 class="section-title" id="capabilities-title">A little about me</h2>
-          <p class="section-subtitle">How I work, the tools I use, and the open-source communities I contribute to.</p>
+          <p class="section-subtitle">I enjoy connecting APIs, data, and models so the result feels simple to use and dependable in production.</p>
         </div>
 
         <!-- Apple Segmented Filter -->
@@ -2048,57 +2114,6 @@
           </article>
 
         </div>
-      </div>
-    </section>
-
-    <!-- OPEN SOURCE CONTRIBUTIONS -->
-    <section id="opensource" aria-labelledby="opensource-title">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
-            <span>04 / Open Source</span>
-          </p>
-          <h2 class="section-title" id="opensource-title">Hardening retrieval infrastructure in RAGFlow.</h2>
-          <p class="section-subtitle">Direct open-source code contributions to Infiniflow's RAGFlow deep document retrieval engine.</p>
-        </div>
-
-        <article class="apple-card">
-          <div class="role-row">
-            <div class="role-meta">
-              <div class="company-monogram" style="background: linear-gradient(135deg, #24292f 0%, #0d1117 100%); border-color: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);" title="GitHub / RAGFlow" aria-label="GitHub logo">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                </svg>
-              </div>
-              <div>
-                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-                  <h3 class="role-title">RAGFlow</h3>
-                  <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--apple-blue); background: var(--apple-blue-soft); padding: 0.2rem 0.65rem; border-radius: var(--radius-full); border: 1px solid rgba(41, 151, 255, 0.25);">Open Source Contributor</span>
-                </div>
-                <div class="role-company" style="color: var(--text-secondary);">infiniflow/ragflow &bull; Deep Document Retrieval Engine</div>
-              </div>
-            </div>
-            <a href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener noreferrer" class="btn btn-glass tactile-press" aria-label="View RAGFlow Repository on GitHub">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              <span>View on GitHub</span>
-            </a>
-          </div>
-
-          <ul class="clean-bullets">
-            <li>Identified and resolved <strong>parameter-precedence handling bugs</strong> across <strong>20+ regression test scenarios</strong>, guaranteeing that client top-k parameters, similarity thresholds, and rerank configurations take deterministic priority.</li>
-            <li>Restored correct <strong>top-k ranking ordering</strong> across <strong>25+ reranking test cases</strong> by enforcing sorting of reranked semantic chunks prior to pagination limits.</li>
-            <li>Extended <strong>AI Agent conversation memory retrieval across 3 languages</strong>, verifying multilingual stability through <strong>15+ automated integration tests</strong>.</li>
-          </ul>
-
-          <div class="tags-row">
-            <span class="tag-chip">Retrieval Correctness</span>
-            <span class="tag-chip">Multilingual Memory</span>
-            <span class="tag-chip">Reranking Algorithms</span>
-            <span class="tag-chip">Vector Search</span>
-            <span class="tag-chip">Regression Testing</span>
-          </div>
-        </article>
       </div>
     </section>
 

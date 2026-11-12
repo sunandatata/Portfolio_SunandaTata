@@ -18,11 +18,12 @@ Building scalable backend services, distributed systems, and AI-enabled platform
 The portfolio is organized for a recruiter-first walkthrough:
 
 1. **Home** — a short introduction and invitation to connect.
-2. **Hire Me** — role focus, measurable engineering impact, and technologies.
+2. **Hire Me** — recent M.S. graduate introduction, measurable engineering impact, and technologies.
 3. **Work Experience** — production work at Pacific Life and Hitachi Vantara.
 4. **Projects** — selected AI, retrieval, and full-stack systems.
-5. **A little about me** — engineering capabilities, open-source work, and education.
-6. **Contact** — direct ways to get in touch.
+5. **Open Source** — a featured RAGFlow contribution focused on predictable retrieval behavior.
+6. **A little about me** — engineering capabilities and education.
+7. **Contact** — direct ways to get in touch.
 
 The site uses a restrained dark layout with a persistent sidebar on desktop and a compact menu on mobile.
 
