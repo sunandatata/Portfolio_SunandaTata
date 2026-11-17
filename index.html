@@ -660,6 +660,27 @@
       color: var(--text-secondary);
       line-height: 1.55;
     }
+    .about-story {
+      max-width: 900px;
+      margin: 1.75rem 0 2.25rem;
+      padding: 1.5rem 1.75rem;
+      border-left: 2px solid var(--apple-blue);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      background: linear-gradient(100deg, rgba(41, 151, 255, 0.09), rgba(41, 151, 255, 0.015));
+    }
+    .about-story p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .about-story p + p { margin-top: 0.85rem; }
+    .about-story strong { color: #ffffff; font-weight: 600; }
+    .about-story .about-mantra {
+      color: #ffffff;
+      font-size: 1.12rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
 
     /* Unified Apple Cards */
     .apple-card {
@@ -1579,7 +1600,7 @@
       <div class="hero-shell">
         <div class="eyebrow-badge"><span class="pulse-dot" aria-hidden="true"></span><span>Software Engineer · AI / Backend Systems</span></div>
         <h1 class="display-h1" id="hero-title"><span class="hero-name">Hi, I'm Sunanda Tata.</span><span class="hero-subhead home-subhead"><span class="hero-subhead-accent">Software Engineer</span></span></h1>
-        <p class="hero-lede">I like making complex things feel simple: dependable services, fast retrieval, and AI that earns its place in real workflows.</p>
+        <p class="hero-lede">I was drawn to the freedom to try, get it wrong, and try again—each time learning more about the problem. That curiosity led me to study Computer Science and pursue software engineering.</p>
         <p class="home-detail">I recently earned my M.S. in Computer Science from California State University, Fullerton (May 2026), after 3+ years building production systems at Pacific Life and Hitachi Vantara.</p>
         <div class="home-role-tags" aria-label="Areas of work"><span>Software Engineer</span><span>Backend Engineer</span><span>AI Engineer</span></div>
         <article class="home-connect-card">
@@ -1932,6 +1953,11 @@
           </p>
           <h2 class="section-title" id="capabilities-title">A little about me</h2>
           <p class="section-subtitle">I enjoy connecting APIs, data, and models so the result feels simple to use and dependable in production.</p>
+        </div>
+
+        <div class="about-story">
+          <p>You could try something, get it completely wrong, and try again. There was no judgment—just a problem waiting to be understood. I was drawn to the idea that something complicated could become understandable if I was patient enough to break it down. Programming felt like a natural fit: it wasn’t about knowing every answer beforehand, but being willing to explore, make mistakes, and figure things out. Gradually, that curiosity became the reason I wanted to study Computer Science.</p>
+          <p>When I began my industry journey at Hitachi Vantara, I saw how that way of thinking could grow into real engineering practice. My manager often reminded me, <strong class="about-mantra">“Slow is smooth, and smooth is fast.”</strong> I learned to understand the problem, make careful decisions, and build a strong foundation before rushing ahead. That guidance helped me bring my CSE studies into the work of building dependable software—and it still shapes how I approach engineering today.</p>
         </div>
 
         <!-- Apple Segmented Filter -->
